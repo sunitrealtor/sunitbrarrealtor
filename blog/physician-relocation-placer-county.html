@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Relocating to Placer County as a physician? Get real advice on neighborhoods, commute times, physician loan programs, and what to expect from someone who's been through it.">
+<title>Relocating to Placer County as a Physician | Sunit Brar Realtor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --deep:   #3D2314;
+    --terra:  #8B4A2B;
+    --sienna: #C4956A;
+    --cream:  #F5EDE4;
+    --stone:  #DDD0C4;
+    --ink:    #1c1a18;
+    --muted:  #7a6a5e;
+    --white:  #ffffff;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; color: var(--ink); background: var(--white); font-size: 16px; line-height: 1.7; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* NAV */
+  nav {
+    background: var(--deep);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 68px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--cream); letter-spacing: 0.02em; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { font-size: 12px; font-weight: 400; color: rgba(245,237,228,0.65); letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--sienna); }
+  .nav-cta { background: var(--sienna); color: var(--deep) !important; font-weight: 500 !important; padding: 9px 20px; border-radius: 4px; opacity: 1 !important; }
+  .nav-cta:hover { background: var(--terra) !important; color: var(--cream) !important; }
+
+  /* HERO */
+  .article-hero {
+    background: var(--deep);
+    padding: 64px 5% 56px;
+    color: var(--cream);
+  }
+  .article-hero-inner { max-width: 760px; margin: 0 auto; }
+  .article-tag {
+    display: inline-block;
+    background: rgba(196,149,106,0.2);
+    color: var(--sienna);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .article-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 54px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--cream);
+  }
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .article-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .author-photo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--sienna);
+  }
+  .author-name { font-size: 14px; font-weight: 500; color: var(--cream); }
+  .author-title { font-size: 12px; color: rgba(245,237,228,0.5); font-weight: 300; }
+  .article-date { font-size: 12px; color: rgba(245,237,228,0.4); font-weight: 300; }
+
+  /* LAYOUT */
+  .article-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 5%;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 60px;
+    align-items: start;
+  }
+
+  /* ARTICLE BODY */
+  .article-body h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--deep);
+    margin: 48px 0 16px;
+    line-height: 1.2;
+  }
+  .article-body h2:first-child { margin-top: 0; }
+  .article-body p {
+    font-size: 16px;
+    color: #3a3330;
+    line-height: 1.85;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+  .article-body strong { font-weight: 500; color: var(--deep); }
+  .article-body ul {
+    margin: 0 0 20px 20px;
+    list-style: none;
+  }
+  .article-body ul li {
+    font-size: 16px;
+    color: #3a3330;
+    line-height: 1.8;
+    font-weight: 300;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+  .article-body ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--sienna);
+  }
+  .article-body .highlight-box {
+    background: var(--cream);
+    border-left: 4px solid var(--sienna);
+    border-radius: 0 8px 8px 0;
+    padding: 20px 24px;
+    margin: 28px 0;
+  }
+  .article-body .highlight-box p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--deep);
+    font-weight: 400;
+    font-style: italic;
+  }
+  .article-divider {
+    height: 1px;
+    background: var(--stone);
+    margin: 48px 0;
+  }
+
+  /* SIDEBAR */
+  .article-sidebar { position: sticky; top: 88px; }
+  .sidebar-card {
+    background: var(--deep);
+    border-radius: 10px;
+    padding: 28px;
+    margin-bottom: 20px;
+    color: var(--cream);
+  }
+  .sidebar-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .sidebar-card-body {
+    font-size: 13px;
+    color: rgba(245,237,228,0.65);
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .sidebar-btn {
+    display: block;
+    background: var(--sienna);
+    color: var(--deep);
+    text-align: center;
+    padding: 13px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+    margin-bottom: 10px;
+  }
+  .sidebar-btn:hover { background: var(--terra); color: var(--cream); }
+  .sidebar-btn-ghost {
+    display: block;
+    border: 1px solid rgba(245,237,228,0.25);
+    color: rgba(245,237,228,0.7);
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 300;
+    transition: border-color 0.2s;
+  }
+  .sidebar-btn-ghost:hover { border-color: var(--sienna); color: var(--cream); }
+
+  .sidebar-toc {
+    background: var(--cream);
+    border: 1px solid var(--stone);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .toc-title {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terra);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  .toc-list { list-style: none; }
+  .toc-list li { margin-bottom: 10px; }
+  .toc-list a {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 300;
+    line-height: 1.4;
+    transition: color 0.2s;
+    display: block;
+  }
+  .toc-list a:hover { color: var(--terra); }
+
+  /* BOTTOM CTA */
+  .article-cta {
+    background: var(--terra);
+    padding: 64px 5%;
+    text-align: center;
+  }
+  .article-cta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+  .article-cta p { font-size: 16px; color: rgba(245,237,228,0.75); margin-bottom: 32px; font-weight: 300; }
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-cream { background: var(--cream); color: var(--deep); padding: 14px 28px; border-radius: 4px; font-size: 14px; font-weight: 500; }
+  .btn-cream:hover { background: var(--white); }
+  .btn-outline { border: 1px solid rgba(245,237,228,0.4); color: var(--cream); padding: 14px 28px; border-radius: 4px; font-size: 14px; font-weight: 300; }
+  .btn-outline:hover { border-color: var(--cream); }
+
+  /* FOOTER */
+  footer { background: var(--deep); padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid rgba(245,237,228,0.08); }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--cream); font-weight: 600; }
+  .footer-info { font-size: 12px; color: rgba(245,237,228,0.4); margin-top: 4px; font-weight: 300; }
+  .footer-contact { font-size: 13px; color: rgba(245,237,228,0.6); line-height: 1.9; font-weight: 300; text-align: right; }
+  .footer-contact a { color: var(--sienna); }
+
+  /* RESPONSIVE */
+  @media (max-width: 860px) {
+    .article-layout { grid-template-columns: 1fr; }
+    .article-sidebar { position: static; }
+    nav ul { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="../index.html" class="nav-logo">Sunit Brar</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#buy">Buy</a></li>
+    <li><a href="../index.html#sell">Sell</a></li>
+    <li><a href="../index.html#commercial">Commercial</a></li>
+    <li><a href="../physician-relocation.html">Physicians</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-tag">Physician Relocation</span>
+    <h1 class="article-title">Relocating to Placer County as a Physician: What No One Tells You About the Sacramento Housing Market</h1>
+    <div class="article-meta">
+      <div class="article-author">
+        <img class="author-photo" src="../sunit-brar.jpg" alt="Sunit Brar">
+        <div>
+          <div class="author-name">Sunit Brar</div>
+          <div class="author-title">Realtor · Stone Real Estate · DRE# 02125592</div>
+        </div>
+      </div>
+      <div class="article-date">May 2026 &middot; 12 min read</div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE LAYOUT -->
+<div class="article-layout">
+
+  <!-- BODY -->
+  <article class="article-body">
+
+    <p>You matched. You signed the contract. You accepted the position.</p>
+    <p>Now someone is asking you to find a house — in a city you may have visited once, in a market you know nothing about, on a timeline that feels impossible given everything else on your plate.</p>
+    <p>I know this feeling well. I am married to a physician, and I relocated here myself from Ohio. I watched firsthand how relocation stress lands on top of an already demanding career. That is part of why I became a Realtor, and why physicians relocating to the Sacramento region have become one of the people I am most passionate about helping.</p>
+    <p>This guide is for you. Not generic advice — real, specific information about what it is actually like to buy a home in Placer County as a physician coming from outside the area.</p>
+
+    <div class="highlight-box">
+      <p>"I moved here from Ohio. My husband is a physician. I know exactly what you're going through — and I know how to make this easier."</p>
+    </div>
+
+    <div class="article-divider"></div>
+
+    <h2 id="why">Why Physicians Are Moving to the Sacramento Region</h2>
+    <p>The Greater Sacramento area has seen a significant influx of physicians over the past several years, driven largely by the expansion of major health systems in the region. UC Davis Medical Center is one of the leading academic medical centers on the West Coast and consistently draws physicians, residents, and fellows from across the country. Sutter Health, Kaiser Permanente, and Dignity Health all have a strong regional presence with multiple facilities throughout Sacramento and Placer County.</p>
+    <p>For physicians coming from the Bay Area, Sacramento offers something increasingly rare — the ability to actually afford a home on a physician's income. The price-to-income ratio here is dramatically more favorable, and the quality of life in communities like Rocklin, Roseville, and Granite Bay is genuinely exceptional.</p>
+
+    <h2 id="placer-vs-sac">Placer County vs. Sacramento: Which Side Makes Sense?</h2>
+    <p>This is one of the first questions I work through with every physician client, because the answer depends heavily on where you will be working and what matters most to your family.</p>
+    <p><strong>If you are working at UC Davis Medical Center</strong>, the campus sits in Sacramento near Highway 50. From Rocklin or Roseville, you are typically looking at a 30 to 45 minute commute depending on traffic. Many physicians make this drive daily and find it manageable — especially given what they get in return: newer construction, excellent schools, lower crime rates, and significantly more space for the money.</p>
+    <p><strong>If you are working at Sutter Roseville or a Placer County facility</strong>, living in Rocklin or Roseville puts you five to fifteen minutes from work. This is a very different lifestyle and worth serious consideration if you have young children or irregular shift schedules.</p>
+    <p>Many physicians I work with initially assume they need to live close to Sacramento and end up in Placer County anyway once they visit and see what the communities feel like. Rocklin and Roseville in particular have a quality of life that is hard to convey on paper.</p>
+
+    <h2 id="neighborhoods">The Neighborhoods Physicians Most Often Choose</h2>
+
+    <p><strong>Granite Bay</strong> is the prestige address in Placer County. Homes here range from the high $700s to well over $3 million for lakefront or custom estates. My highest residential sale — $2.24 million on Shelborne Drive — was in Granite Bay. The public schools feed into the highly rated Granite Bay High School. If you have school-age children and a higher budget, this is frequently the first neighborhood I show physician clients.</p>
+
+    <p><strong>Rocklin</strong> sits at a sweet spot of price, quality, and community. Median home prices hover around $700,000 to $850,000. I am based in Rocklin and know this market street by street.</p>
+
+    <p><strong>Roseville</strong> is the largest city in Placer County and offers the most variety in price points and neighborhoods. Sutter Roseville Medical Center is located here, which makes it a natural choice for physicians joining that system.</p>
+
+    <p><strong>Lincoln</strong> offers more land, newer construction at lower price points, and a quieter lifestyle. For physicians working at facilities in north Placer County, it can be an excellent fit.</p>
+
+    <h2 id="timeline">What the Timeline Actually Looks Like</h2>
+    <p>Most physicians are finalizing employment contracts, dealing with credentialing, managing licensing in a new state, and trying to move a family — all simultaneously. The home search often gets pushed to the last possible moment. Here is what I typically recommend:</p>
+    <ul>
+      <li><strong>Six months out:</strong> Start researching neighborhoods online. Visit for a weekend if possible and drive through Rocklin, Roseville, and Granite Bay.</li>
+      <li><strong>Three to four months out:</strong> Connect with a lender and get pre-approved. Physician loan programs are a significant advantage here.</li>
+      <li><strong>Two to three months out:</strong> Begin actively searching. Well-priced homes in desirable areas still move quickly — being pre-approved and ready gives you a real advantage.</li>
+      <li><strong>Six weeks out:</strong> Ideally you are under contract by this point, giving time for inspections, appraisal, and closing before your start date.</li>
+    </ul>
+    <p>I have helped physician clients compress this timeline significantly when circumstances required it. It is doable, but the more lead time you have, the better the outcome.</p>
+
+    <h2 id="loans">Physician Loan Programs: A Quick Note</h2>
+    <p>Many physicians I work with are not aware of how favorable mortgage programs can be for their profession. Because physician income is highly predictable and physician default rates are very low, many lenders have created dedicated physician loan products that allow for:</p>
+    <ul>
+      <li>Zero to 5% down payment with no private mortgage insurance (PMI)</li>
+      <li>Qualification based on an employment contract before your start date</li>
+      <li>Student loan debt treated more favorably in debt-to-income calculations</li>
+    </ul>
+    <p>I work with several lenders in the Sacramento area who specialize in physician financing and can make introductions at no cost to you.</p>
+
+    <h2 id="why-me">Why I Work Specifically With Physicians</h2>
+    <p>Being married to a physician gave me a front-row seat to what this process feels like from the inside. I understand what it means when a client says they cannot talk before 7pm or needs to do a video tour because they cannot fly out until two weeks before their start date. I work around your schedule, not the other way around.</p>
+    <p>I also relocated here from Ohio myself — so I genuinely understand what it means to uproot your family and start fresh in a new city. That experience shapes how I approach every relocation client.</p>
+    <p>I also cover both residential and commercial real estate, which matters more than people expect. Physicians who eventually want to invest in medical office space or explore commercial real estate have a single point of contact who can handle both sides.</p>
+
+    <div class="article-divider"></div>
+
+    <p>Want the full step-by-step physician relocation guide — including a printable checklist, neighborhood comparison, and lender recommendations? Download it free below.</p>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="article-sidebar">
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Get the full physician relocation guide</div>
+      <div class="sidebar-card-body">Includes a printable checklist, neighborhood comparison chart, and physician lender recommendations for the Sacramento region. Free download.</div>
+      <a href="../physician-relocation.html" class="sidebar-btn">Download free guide &rarr;</a>
+      <a href="tel:2162882096" class="sidebar-btn-ghost">Call (216) 288-2096</a>
+    </div>
+
+    <div class="sidebar-toc">
+      <div class="toc-title">In this guide</div>
+      <ul class="toc-list">
+        <li><a href="#why">Why physicians are moving here</a></li>
+        <li><a href="#placer-vs-sac">Placer County vs. Sacramento</a></li>
+        <li><a href="#neighborhoods">Neighborhoods to consider</a></li>
+        <li><a href="#timeline">What the timeline looks like</a></li>
+        <li><a href="#loans">Physician loan programs</a></li>
+        <li><a href="#why-me">Why I work with physicians</a></li>
+      </ul>
+    </div>
+
+  </aside>
+
+</div>
+
+<!-- BOTTOM CTA -->
+<div class="article-cta">
+  <h2>Relocating to Placer County?<br>Let's talk.</h2>
+  <p>No pressure. A 20-minute call can save you weeks of uncertainty.</p>
+  <div class="cta-btns">
+    <a href="../physician-relocation.html" class="btn-cream">Download the relocation guide</a>
+    <a href="tel:2162882096" class="btn-outline">Call (216) 288-2096</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">Sunit Brar · Stone Real Estate</div>
+    <div class="footer-info">DRE# 02125592 · 3500 Douglas Blvd, Roseville CA 95661</div>
+  </div>
+  <div class="footer-contact">
+    <a href="tel:2162882096">(216) 288-2096</a> &middot;
+    <a href="mailto:sunitrealtor@gmail.com">sunitrealtor@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
