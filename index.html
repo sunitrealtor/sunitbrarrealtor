@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sunit Brar — Placer County Realtor specializing in luxury homes, physician relocation, and commercial leasing in Rocklin, Roseville, and Granite Bay.">
+<title>Sunit Brar | Placer County Realtor — Rocklin, Roseville, Granite Bay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --deep:    #3D2314;
+    --terra:   #8B4A2B;
+    --sienna:  #C4956A;
+    --cream:   #F5EDE4;
+    --stone:   #DDD0C4;
+    --ink:     #1c1a18;
+    --muted:   #7a6a5e;
+    --white:   #ffffff;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--deep);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 68px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--cream);
+    letter-spacing: 0.02em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(245,237,228,0.65);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--sienna); }
+  .nav-cta {
+    background: var(--sienna);
+    color: var(--deep) !important;
+    font-weight: 500 !important;
+    padding: 9px 20px;
+    border-radius: 4px;
+    opacity: 1 !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--terra) !important; color: var(--cream) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--deep);
+    color: var(--cream);
+    padding: 80px 5% 64px;
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 64px;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sienna);
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+  .hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 6vw, 72px);
+    font-weight: 700;
+    line-height: 1.08;
+    margin-bottom: 22px;
+    color: var(--cream);
+  }
+  .hero-sub {
+    font-size: 16px;
+    line-height: 1.75;
+    color: rgba(245,237,228,0.6);
+    font-weight: 300;
+    max-width: 480px;
+    margin-bottom: 36px;
+  }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--sienna);
+    color: var(--deep);
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--terra); color: var(--cream); }
+  .btn-ghost {
+    border: 1px solid rgba(245,237,228,0.3);
+    color: var(--cream);
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-ghost:hover { border-color: var(--sienna); background: rgba(196,149,106,0.08); }
+
+  .hero-photo-wrap {
+    position: relative;
+  }
+  .hero-photo {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+  }
+  .hero-photo-badge {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background: var(--terra);
+    color: var(--cream);
+    padding: 16px 20px;
+    border-radius: 6px;
+  }
+  .badge-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .badge-label { font-size: 11px; opacity: 0.8; margin-top: 3px; font-weight: 300; }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    background: var(--terra);
+    padding: 36px 5%;
+  }
+  .stats-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .stat {
+    padding: 0 24px;
+    border-right: 1px solid rgba(245,237,228,0.2);
+  }
+  .stat:last-child { border-right: none; }
+  .stat-n {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1;
+  }
+  .stat-l { font-size: 12px; color: rgba(245,237,228,0.65); margin-top: 6px; font-weight: 300; }
+
+  /* ── SECTIONS ── */
+  section { padding: 80px 5%; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 700;
+    color: var(--deep);
+    line-height: 1.15;
+    margin-bottom: 40px;
+  }
+
+  /* ── SPECIALTIES ── */
+  .specialties { background: var(--white); }
+  .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .spec-card {
+    border: 1px solid var(--stone);
+    border-radius: 8px;
+    padding: 28px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .spec-card:hover { border-color: var(--sienna); }
+  .spec-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(139,74,43,0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    font-size: 22px;
+  }
+  .spec-title { font-size: 17px; font-weight: 500; color: var(--deep); margin-bottom: 10px; }
+  .spec-desc { font-size: 14px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+
+  /* ── PHYSICIAN ── */
+  .physician-section { background: var(--cream); }
+  .physician-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .physician-badge {
+    display: inline-block;
+    background: rgba(139,74,43,0.1);
+    color: var(--terra);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 3px;
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+  .physician-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 700;
+    color: var(--deep);
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+  .physician-body { font-size: 15px; color: var(--muted); line-height: 1.8; font-weight: 300; margin-bottom: 28px; }
+  .physician-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--terra);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--terra);
+    padding-bottom: 2px;
+  }
+  .physician-panel {
+    background: var(--deep);
+    border-radius: 10px;
+    padding: 32px;
+  }
+  .phys-stat { padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid rgba(245,237,228,0.1); }
+  .phys-stat:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: none; }
+  .phys-label { font-size: 10px; color: rgba(245,237,228,0.4); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+  .phys-val { font-family: 'Cormorant Garamond', serif; font-size: 26px; color: var(--sienna); font-weight: 700; line-height: 1; }
+  .phys-sub { font-size: 12px; color: rgba(245,237,228,0.5); margin-top: 4px; font-weight: 300; }
+
+  /* ── NEIGHBORHOODS ── */
+  .neighborhoods { background: var(--white); }
+  .hood-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .hood-card {
+    border: 1px solid var(--stone);
+    border-radius: 8px;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: border-color 0.2s;
+    cursor: pointer;
+  }
+  .hood-card:hover { border-color: var(--sienna); }
+  .hood-name { font-size: 16px; font-weight: 500; color: var(--deep); }
+  .hood-meta { font-size: 12px; color: var(--muted); margin-top: 4px; font-weight: 300; }
+  .hood-arrow { font-size: 20px; color: var(--sienna); }
+
+  /* ── BLOG ── */
+  .blog-section { background: var(--cream); }
+  .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .blog-card {
+    background: var(--white);
+    border: 1px solid var(--stone);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .blog-card:hover { border-color: var(--sienna); }
+  .blog-card-tag {
+    background: rgba(139,74,43,0.08);
+    color: var(--terra);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    font-weight: 500;
+  }
+  .blog-card-body { padding: 20px; }
+  .blog-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--deep);
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+  .blog-card-desc { font-size: 13px; color: var(--muted); line-height: 1.7; font-weight: 300; margin-bottom: 16px; }
+  .blog-card-link { font-size: 12px; color: var(--terra); font-weight: 500; letter-spacing: 0.06em; }
+
+  /* ── ABOUT ── */
+  .about-section { background: var(--deep); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .about-photo {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+  }
+  .about-eyebrow { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sienna); margin-bottom: 12px; font-weight: 500; }
+  .about-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .about-body { font-size: 15px; color: rgba(245,237,228,0.65); line-height: 1.8; font-weight: 300; margin-bottom: 28px; }
+  .about-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+  .about-tag {
+    background: rgba(245,237,228,0.06);
+    border: 1px solid rgba(245,237,228,0.15);
+    color: rgba(245,237,228,0.6);
+    font-size: 12px;
+    padding: 5px 14px;
+    border-radius: 3px;
+    font-weight: 300;
+  }
+  .donation-note {
+    border-left: 3px solid var(--sienna);
+    border-radius: 0;
+    padding-left: 16px;
+    font-size: 13px;
+    color: rgba(245,237,228,0.5);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  /* ── CTA ── */
+  .cta-section { background: var(--terra); padding: 64px 5%; text-align: center; }
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+  .cta-sub { font-size: 16px; color: rgba(245,237,228,0.7); margin-bottom: 36px; font-weight: 300; }
+  .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-cream {
+    background: var(--cream);
+    color: var(--deep);
+    padding: 15px 32px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+  }
+  .btn-cream:hover { background: var(--white); }
+  .btn-outline-cream {
+    border: 1px solid rgba(245,237,228,0.5);
+    color: var(--cream);
+    padding: 15px 32px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 300;
+    transition: border-color 0.2s;
+  }
+  .btn-outline-cream:hover { border-color: var(--cream); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--deep);
+    padding: 40px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-top: 1px solid rgba(245,237,228,0.08);
+  }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--cream); font-weight: 600; }
+  .footer-info { font-size: 12px; color: rgba(245,237,228,0.4); margin-top: 4px; font-weight: 300; }
+  .footer-right { text-align: right; }
+  .footer-contact { font-size: 13px; color: rgba(245,237,228,0.6); line-height: 1.9; font-weight: 300; }
+  .footer-contact a { color: var(--sienna); }
+  .footer-social { display: flex; gap: 16px; margin-top: 12px; justify-content: flex-end; }
+  .footer-social a {
+    font-size: 12px;
+    color: rgba(245,237,228,0.4);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .footer-social a:hover { color: var(--sienna); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-photo-wrap { display: none; }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .stat { border-right: none; border-bottom: 1px solid rgba(245,237,228,0.2); padding: 16px 0; }
+    .stat:last-child { border-bottom: none; }
+    .spec-grid { grid-template-columns: 1fr; }
+    .physician-grid { grid-template-columns: 1fr; }
+    .hood-grid { grid-template-columns: 1fr; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-photo { aspect-ratio: 4/3; }
+    footer { flex-direction: column; text-align: center; }
+    .footer-right { text-align: center; }
+    .footer-social { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Sunit Brar</div>
+  <ul class="nav-links">
+    <li><a href="#buy">Buy</a></li>
+    <li><a href="#sell">Sell</a></li>
+    <li><a href="#commercial">Commercial</a></li>
+    <li><a href="#physicians">Physicians</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Placer County &middot; Sacramento Region &middot; Residential &amp; Commercial</div>
+      <h1 class="hero-headline">Your move.<br>Done right.</h1>
+      <p class="hero-sub">From first-time buyers to luxury estates, physician relocations to commercial leases — I cover it all, and I know this market street by street.</p>
+      <div class="hero-btns">
+        <a href="https://www.realtor.com/realestateandhomes-search/Placer-County_CA" target="_blank" rel="noopener" class="btn-primary">Search homes</a>
+        <a href="#physicians" class="btn-ghost">Relocating to Placer County? &rarr;</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="sunit-brar.jpg" alt="Sunit Brar — Placer County Realtor">
+      <div class="hero-photo-badge">
+        <div class="badge-num">$8.5M+</div>
+        <div class="badge-label">Volume closed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat">
+      <div class="stat-n">15</div>
+      <div class="stat-l">Closed sides</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">$769K</div>
+      <div class="stat-l">Average sale price</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">$2.24M</div>
+      <div class="stat-l">Highest sale &mdash; Granite Bay</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">2</div>
+      <div class="stat-l">Commercial leases closed</div>
+    </div>
+  </div>
+</div>
+
+<!-- SPECIALTIES -->
+<section class="specialties" id="buy">
+  <div class="section-inner">
+    <div class="section-label">What I do</div>
+    <h2 class="section-title">One agent.<br>Every transaction.</h2>
+    <div class="spec-grid">
+      <div class="spec-card">
+        <div class="spec-icon">🏡</div>
+        <h3 class="spec-title">Residential buyers &amp; sellers</h3>
+        <p class="spec-desc">From starter homes to $2M+ luxury estates across Rocklin, Roseville, and Granite Bay. I work with first-time buyers, move-up buyers, and luxury clients at every price point.</p>
+      </div>
+      <div class="spec-card" id="physicians">
+        <div class="spec-icon">🩺</div>
+        <h3 class="spec-title">Physician relocation</h3>
+        <p class="spec-desc">Married to a physician. I relocated here from Ohio myself. I understand your timeline, your stress, and exactly what you need — before you even know you need it.</p>
+      </div>
+      <div class="spec-card" id="commercial">
+        <div class="spec-icon">🏢</div>
+        <h3 class="spec-title">Commercial leasing</h3>
+        <p class="spec-desc">Retail and office leases closed with 5-year terms. Most residential agents never cross into commercial — I work both sides of the market.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHYSICIAN SECTION -->
+<section class="physician-section">
+  <div class="section-inner">
+    <div class="physician-grid">
+      <div>
+        <span class="physician-badge">Physician specialist</span>
+        <h2 class="physician-title">Relocating for a medical position?</h2>
+        <p class="physician-body">I moved here from Ohio. My husband is a physician. I know exactly what it feels like to uproot your family for a new position — the compressed timeline, the school research, the neighborhood decisions you're making from 2,000 miles away.<br><br>I've helped buyers close in Granite Bay at $2.24M and guided clients through every price range in between. I will work around your schedule, not the other way around.</p>
+        <a href="physician-relocation.html" class="physician-link">Read the full relocation guide &rarr;</a>
+      </div>
+      <div class="physician-panel">
+        <div class="phys-stat">
+          <div class="phys-label">Physician loan programs</div>
+          <div class="phys-val">0% down available</div>
+          <div class="phys-sub">No PMI &middot; Available to MDs &amp; DOs</div>
+        </div>
+        <div class="phys-stat">
+          <div class="phys-label">Typical buyer timeline</div>
+          <div class="phys-val">60&ndash;90 days</div>
+          <div class="phys-sub">From first call to keys in hand</div>
+        </div>
+        <div class="phys-stat">
+          <div class="phys-label">Major nearby hospitals</div>
+          <div class="phys-val">UC Davis &middot; Sutter &middot; Kaiser</div>
+          <div class="phys-sub">All within commute range of Placer County</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEIGHBORHOODS -->
+<section class="neighborhoods">
+  <div class="section-inner">
+    <div class="section-label">Where I work</div>
+    <h2 class="section-title">Placer County neighborhoods</h2>
+    <div class="hood-grid">
+      <a href="neighborhoods/granite-bay.html" class="hood-card">
+        <div>
+          <div class="hood-name">Granite Bay</div>
+          <div class="hood-meta">Luxury &middot; $800K &ndash; $3M+</div>
+        </div>
+        <div class="hood-arrow">&rarr;</div>
+      </a>
+      <a href="neighborhoods/rocklin.html" class="hood-card">
+        <div>
+          <div class="hood-name">Rocklin</div>
+          <div class="hood-meta">Move-up &middot; $600K &ndash; $1.1M</div>
+        </div>
+        <div class="hood-arrow">&rarr;</div>
+      </a>
+      <a href="neighborhoods/roseville.html" class="hood-card">
+        <div>
+          <div class="hood-name">Roseville</div>
+          <div class="hood-meta">All price points &middot; $450K &ndash; $900K</div>
+        </div>
+        <div class="hood-arrow">&rarr;</div>
+      </a>
+      <a href="neighborhoods/lincoln.html" class="hood-card">
+        <div>
+          <div class="hood-name">Lincoln</div>
+          <div class="hood-meta">New construction &middot; $500K &ndash; $750K</div>
+        </div>
+        <div class="hood-arrow">&rarr;</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog-section">
+  <div class="section-inner">
+    <div class="section-label">From the blog</div>
+    <h2 class="section-title">Real advice.<br>No fluff.</h2>
+    <div class="blog-grid">
+      <a href="blog/physician-relocation-placer-county.html" class="blog-card">
+        <div class="blog-card-tag">Physician relocation</div>
+        <div class="blog-card-body">
+          <h3 class="blog-card-title">Relocating to Placer County as a Physician: What No One Tells You</h3>
+          <p class="blog-card-desc">The real commute times, physician loan programs, and neighborhood breakdown you need before you sign anything.</p>
+          <div class="blog-card-link">Read more &rarr;</div>
+        </div>
+      </a>
+      <a href="blog/placer-county-market-update.html" class="blog-card">
+        <div class="blog-card-tag">Market update</div>
+        <div class="blog-card-body">
+          <h3 class="blog-card-title">Placer County Market Update: What Buyers and Sellers Need to Know in 2026</h3>
+          <p class="blog-card-desc">Inventory, pricing trends, and what the current rate environment actually means for your next move.</p>
+          <div class="blog-card-link">Read more &rarr;</div>
+        </div>
+      </a>
+      <a href="blog/granite-bay-luxury-homes.html" class="blog-card">
+        <div class="blog-card-tag">Neighborhoods</div>
+        <div class="blog-card-body">
+          <h3 class="blog-card-title">Why Granite Bay Keeps Attracting Luxury Buyers — And What to Expect</h3>
+          <p class="blog-card-desc">From Folsom Lake views to top-rated schools, what makes Granite Bay the most sought-after address in Placer County.</p>
+          <div class="blog-card-link">Read more &rarr;</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <img class="about-photo" src="sunit-brar.jpg" alt="Sunit Brar — Placer County Realtor">
+      <div>
+        <div class="about-eyebrow">About Sunit</div>
+        <h2 class="about-title">I relocated here too.<br>I know what it takes.</h2>
+        <p class="about-body">I moved from Ohio, built a life in Placer County, and have been serving buyers, sellers, and commercial clients here since 2020. I also co-own Nexus Lounge &amp; VR in Rocklin — so when I say I'm invested in this community, I mean it literally.<br><br>My clients range from first-time buyers to physicians relocating from across the country to investors buying their second commercial lease. What they have in common is that they trusted me with one of the biggest decisions of their lives — and I take that seriously.</p>
+        <div class="about-tags">
+          <span class="about-tag">Licensed since Oct 2020</span>
+          <span class="about-tag">Residential &amp; commercial</span>
+          <span class="about-tag">Nexus Lounge &amp; VR, Rocklin</span>
+          <span class="about-tag">Relocated from Ohio</span>
+          <span class="about-tag">DRE# 02125592</span>
+        </div>
+        <p class="donation-note">A portion of every transaction is donated to a Parkinson's nonprofit organization.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <h2 class="cta-title">Ready to make a move?</h2>
+  <p class="cta-sub">No pressure. Let's start with a conversation.</p>
+  <div class="cta-btns">
+    <a href="tel:2162882096" class="btn-cream">Call (216) 288-2096</a>
+    <a href="mailto:sunitrealtor@gmail.com" class="btn-outline-cream">Send an email</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">Sunit Brar &middot; Stone Real Estate</div>
+    <div class="footer-info">DRE# 02125592 &middot; 3500 Douglas Blvd, Roseville CA 95661</div>
+  </div>
+  <div class="footer-right">
+    <div class="footer-contact">
+      <a href="tel:2162882096">(216) 288-2096</a> &middot;
+      <a href="mailto:sunitrealtor@gmail.com">sunitrealtor@gmail.com</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/sunitbrarrealtor" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/sunitbrarrealtor" target="_blank">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
