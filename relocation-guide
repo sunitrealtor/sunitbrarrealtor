@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Physician Family's Guide to Greater Sacramento & Placer County — Sunit Brar</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B2B4B;
+    --navy-mid: #2C4070;
+    --navy-light: #3A5080;
+    --gold: #B8966E;
+    --gold-light: #D4B896;
+    --gold-pale: #F5EDE0;
+    --cream: #FDFAF6;
+    --gray-light: #F4F4F2;
+    --gray-mid: #888;
+    --text: #2A2A2A;
+    --text-soft: #555;
+    --white: #fff;
+    --teal: #2C6E6A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--navy);
+    color: var(--text);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* ── NAV ── */
+  #nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 52px;
+    background: rgba(27,43,75,0.97);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 100;
+    border-bottom: 1px solid rgba(184,150,110,0.3);
+  }
+
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--gold-light);
+    letter-spacing: 0.04em;
+  }
+
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-btn {
+    background: none;
+    border: 1px solid rgba(184,150,110,0.4);
+    color: var(--gold-light);
+    padding: 5px 14px;
+    border-radius: 3px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .nav-btn:hover { background: rgba(184,150,110,0.15); border-color: var(--gold); }
+  .nav-btn:disabled { opacity: 0.3; cursor: default; }
+
+  #page-counter {
+    font-size: 12px;
+    color: var(--gold-light);
+    min-width: 70px;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── FLIPBOOK CONTAINER ── */
+  #book-container {
+    position: fixed;
+    top: 52px; left: 0; right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 2000px;
+    background: var(--navy);
+    overflow: hidden;
+  }
+
+  #book {
+    width: 90vw;
+    max-width: 1100px;
+    height: calc(90vw * 0.5625);
+    max-height: calc(100vh - 100px);
+    position: relative;
+  }
+
+  .page {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+  }
+
+  .page.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+  }
+
+  .page.exit-left {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  /* ── SHARED PAGE LAYOUT ── */
+  .page-inner {
+    width: 100%; height: 100%;
+    display: grid;
+  }
+
+  .gold-bar-top {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+  }
+
+  .gold-bar-bottom {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+  }
+
+  .page-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  h1.display {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  h2.section {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2.8vw, 34px);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--navy);
+  }
+
+  h3.sub {
+    font-family: 'Jost', sans-serif;
+    font-size: clamp(10px, 1.2vw, 13px);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  p.body-text {
+    font-size: clamp(8px, 1vw, 11px);
+    line-height: 1.7;
+    color: var(--text-soft);
+    font-weight: 300;
+  }
+
+  .gold-rule {
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin: 8px 0;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    height: 100%;
+  }
+
+  .three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+  }
+
+  .card {
+    background: var(--gray-light);
+    border-radius: 4px;
+    padding: 14px;
+  }
+
+  .card-navy {
+    background: var(--navy);
+    border-radius: 4px;
+    padding: 14px;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(184,150,110,0.12);
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-bottom: 4px;
+  }
+
+  .bullet {
+    font-size: clamp(8px, 0.95vw, 10.5px);
+    line-height: 1.6;
+    color: var(--text-soft);
+    padding-left: 12px;
+    position: relative;
+    margin-bottom: 3px;
+    font-weight: 300;
+  }
+  .bullet::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  /* ══════════════════════════════════════════
+     PAGE 1 — COVER
+  ══════════════════════════════════════════ */
+  #p1 { background: var(--navy); }
+  #p1 .page-inner {
+    grid-template-rows: 1fr auto 1fr;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+  }
+
+  .cover-side-left, .cover-side-right {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 18px;
+    background: var(--navy-mid);
+  }
+  .cover-side-left { left: 0; }
+  .cover-side-right { right: 0; }
+
+  .cover-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(60px, 9vw, 96px);
+    font-weight: 600;
+    color: rgba(184,150,110,0.18);
+    line-height: 1;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: -0.02em;
+    user-select: none;
+  }
+
+  .cover-center {
+    grid-row: 2;
+    z-index: 2;
+  }
+
+  .cover-pre {
+    font-size: clamp(9px, 1.1vw, 13px);
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .cover-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3.5vw, 44px);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 6px;
+  }
+
+  .cover-gold-line {
+    width: 120px;
+    height: 1.5px;
+    background: var(--gold);
+    margin: 14px auto;
+  }
+
+  .cover-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(11px, 1.5vw, 16px);
+    color: var(--gold-light);
+    margin-bottom: 20px;
+  }
+
+  .cover-author-box {
+    background: var(--navy-mid);
+    border: 1px solid rgba(184,150,110,0.3);
+    border-radius: 4px;
+    padding: 14px 28px;
+    display: inline-block;
+  }
+
+  .cover-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 2.2vw, 26px);
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .cover-role {
+    font-size: clamp(8px, 1vw, 11px);
+    color: var(--gold-light);
+    letter-spacing: 0.06em;
+    margin-top: 3px;
+  }
+
+  .cover-contact {
+    font-size: clamp(7px, 0.85vw, 10px);
+    color: rgba(245,237,224,0.7);
+    margin-top: 4px;
+    letter-spacing: 0.03em;
+  }
+
+  /* ══════════════════════════════════════════
+     PAGE 2 — MY STORY
+  ══════════════════════════════════════════ */
+  #p2 { background: var(--cream); }
+  #p2 .page-inner {
+    padding: 36px 40px 28px;
+    grid-template-rows: auto 1fr;
+    gap: 14px;
+    position: relative;
+  }
+
+  .story-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(11px, 1.5vw, 17px);
+    color: var(--navy);
+    line-height: 1.5;
+    border-left: 3px solid var(--gold);
+    padding-left: 14px;
+    margin: 10px 0;
+  }
+
+  .giving-box {
+    background: var(--gold-pale);
+    border-radius: 4px;
+    padding: 10px 16px;
+    margin-top: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(9px, 1.1vw, 13px);
+    color: var(--navy);
+    text-align: center;
+    border: 1px solid rgba(184,150,110,0.3);
+  }
+
+  /* ══════════════════════════════════════════
+     PAGE 3 — WHY SACRAMENTO
+  ══════════════════════════════════════════ */
+  #p3 { background: var(--white); }
+  #p3 .page-inner {
+    padding: 32px 40px 24px;
+    grid-template-rows: auto auto 1fr;
+    gap: 14px;
+    position: relative;
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .stat-card {
+    background: var(--gray-light);
+    border-radius: 4px;
+    padding: 10px 6px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 2.4vw, 28px);
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .stat-lbl {
+    font-size: clamp(7px, 0.8vw, 9px);
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+  }
+
+  .stat-sub {
+    font-size: clamp(6px, 0.7vw, 8px);
+    color: var(--gray-mid);
+    margin-top: 1px;
+  }
+
+  /* ══════════════════════════════════════════
+     PAGE 4 — NEIGHBORHOODS
+  ══════════════════════════════════════════ */
+  #p4 { background: var(--cream); }
+  #p4 .page-inner {
+    padding: 28px 40px 24px;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 10px;
+    position: relative;
+  }
+
+  .hood-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .hood-card {
+    background: var(--white);
+    border-radius: 4px;
+    padding: 12px;
+    border-left: 3px solid var(--gold);
+  }
+
+  .hood-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(13px, 1.7vw, 18px);
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+
+  .hood-price {
+    font-size: clamp(7px, 0.85vw, 10px);
+    color: var(--teal);
+    font-weight: 600;
+    margin: 2px 0 4px;
+  }
+
+  /* ══════════════════════════════════════════
+     PAGE 5 — COMMUNITY
+  ══════════════════════════════════════════ */
+  #p5 { background: var(--white); }
+  #p5 .page-inner {
+    padding: 28px 40px 24px;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
+    position: relative;
+  }
+
+  .comm-left {
+    background: var(--navy);
+    border-radius: 6px;
+    padding: 18px;
+    height: 100%;
+  }
+
+  /* ══════════════════════════════════════════
+     PAGE 6 — SCHOOLS
+  ══════════════════════════════════════════ */
+  #p6 { background: var(--cream); }
+  #p6 .page-inner {
+    padding: 28px 40px 24px;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
+    position: relative;
+  }
+
+  .school-row {
+    display: flex;
+    gap: 6px;
+    align-items: baseline;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .school-name {
+    font-weight: 600;
+    font-size: clamp(8px, 0.95vw, 11px);
+    color: var(--navy);
+    min-width: 180px;
+  }
+
+  .school-area {
+    font-size: clamp(7px, 0.8vw, 9px);
+    color: var(--gold);
+    font-weight: 500;
+    min-width: 120px;
+  }
+
+  /* ══════════════════════════════════════════
+     PAGE 7 — LIFESTYLE
+  ══════════════════════════════════════════ */
+  #p7 { background: var(--white); }
+  #p7 .page-inner {
+    padding: 28px 40px 24px;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
+    position: relative;
+  }
+
+  .life-card {
+    background: var(--navy);
+    border-radius: 6px;
+    padding: 16px;
+  }
+
+  /* ══════════════════════════════════════════
+     PAGE 8 — LOANS + HOW I HELP
+  ══════════════════════════════════════════ */
+  #p8 { background: var(--cream); }
+  #p8 .page-inner {
+    padding: 28px 40px 24px;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
+    position: relative;
+  }
+
+  .phase-head {
+    font-size: clamp(8px, 0.95vw, 11px);
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 8px 0 3px;
+  }
+
+  /* ══════════════════════════════════════════
+     PAGE 9 — BACK COVER
+  ══════════════════════════════════════════ */
+  #p9 { background: var(--navy); }
+  #p9 .page-inner {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    grid-template-rows: 1fr auto 1fr;
+  }
+
+  .back-center { grid-row: 2; z-index: 2; }
+
+  /* ── DOTS ── */
+  #dots {
+    position: fixed;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 7px;
+    z-index: 100;
+  }
+
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(184,150,110,0.3);
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+  .dot.active {
+    background: var(--gold);
+    transform: scale(1.3);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .page.active .anim-1 { animation: fadeUp 0.5s 0.05s both; }
+  .page.active .anim-2 { animation: fadeUp 0.5s 0.15s both; }
+  .page.active .anim-3 { animation: fadeUp 0.5s 0.25s both; }
+  .page.active .anim-4 { animation: fadeUp 0.5s 0.35s both; }
+  .page.active .anim-5 { animation: fadeUp 0.5s 0.45s both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-brand">Sunit Brar — Physician Family Relocation Guide 2025</div>
+  <div class="nav-controls">
+    <button class="nav-btn" id="prev-btn" onclick="changePage(-1)" disabled>&#8592; Prev</button>
+    <span id="page-counter">1 / 9</span>
+    <button class="nav-btn" id="next-btn" onclick="changePage(1)">Next &#8594;</button>
+  </div>
+</nav>
+
+<div id="book-container">
+<div id="book">
+
+<!-- ══════════════════════════════════════ PAGE 1 — COVER ══════════════════════════════════════ -->
+<div class="page active" id="p1">
+  <div class="gold-bar-top"></div>
+  <div class="gold-bar-bottom"></div>
+  <div class="cover-side-left"></div>
+  <div class="cover-side-right"></div>
+  <div class="page-inner">
+    <div class="cover-year anim-1">2025</div>
+    <div class="cover-center">
+      <div class="cover-pre anim-2">The Physician Family's Guide to</div>
+      <div class="cover-title anim-2">Greater Sacramento<br>&amp; Placer County</div>
+      <div class="cover-gold-line anim-3"></div>
+      <div class="cover-sub anim-3">Written from the heart of a physician spouse<br>who made this journey herself</div>
+      <div class="cover-author-box anim-4">
+        <div class="cover-name">Sunit Brar</div>
+        <div class="cover-role">REALTOR® · Stone Real Estate · Placer County Specialist</div>
+        <div class="cover-role">Physician Family Relocation Expert</div>
+        <div class="cover-contact">(216) 288-2096 · sunitrealtor@gmail.com · sunitbrarrealtor.com · DRE# 02125592</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ PAGE 2 — MY STORY ══════════════════════════════════════ -->
+<div class="page" id="p2">
+  <div class="gold-bar-top"></div>
+  <div class="gold-bar-bottom"></div>
+  <div class="page-inner">
+    <div>
+      <div class="page-label anim-1">Our Story</div>
+      <h2 class="section anim-1">From India to Ohio to Loomis —<br>A Journey I Know By Heart</h2>
+      <div class="gold-rule anim-2"></div>
+    </div>
+    <div class="two-col anim-3">
+      <div>
+        <h3 class="sub">I know exactly what it feels like to be you right now.</h3>
+        <p class="body-text" style="margin-bottom:8px">My name is Sunit Brar. I'm a REALTOR® and Placer County specialist — and a physician's spouse who has lived this relocation journey in its most real, unfiltered form.</p>
+        <p class="body-text" style="margin-bottom:8px">My husband is a pulmonary and critical care physician. We moved from India to Ohio, where he completed his residency and fellowship, built a thriving private practice, and we put down roots for over a decade. I ran his medical office alongside raising our family. Then in 2019, we made the leap — closing his practice and starting over in California.</p>
+        <div class="story-quote">"The hardest part? He moved first. I stayed behind in Ohio with our children until the school year ended."</div>
+        <p class="body-text">I know the loneliness of that in-between time — one foot in the old life, one reaching toward the new. I know what it's like to pack up a home alone, to say goodbye to the community you built, and to arrive somewhere not knowing a single soul.</p>
+        <div class="giving-box">A portion of every transaction I close is donated to a Parkinson's nonprofit — because giving back is at the heart of everything I do.</div>
+      </div>
+      <div>
+        <h3 class="sub">What surprised me most — Loomis felt like home immediately.</h3>
+        <p class="body-text" style="margin-bottom:8px">We found our home in Loomis — and something clicked right away. Loomis has the same quiet, country-adjacent charm as the Copley area of Ohio where we'd lived. A little away from the main suburbs, a little more space to breathe, oak trees instead of maples. It felt right.</p>
+        <p class="body-text" style="margin-bottom:8px">And then I discovered something I hadn't expected — how wonderfully diverse and welcoming this community is. Sacramento and Placer County have thriving South Asian communities, Sikh gurdwaras, Hindu temples, Indian grocery stores, cultural events, and warm neighborhoods where my family felt seen and at home almost immediately.</p>
+        <p class="body-text" style="margin-bottom:8px">The weather alone was a revelation after Ohio winters.</p>
+        <h3 class="sub" style="margin-top:12px">Why I became a REALTOR®</h3>
+        <p class="body-text">I became a REALTOR® because of this experience — because I wished someone had walked alongside me the way I now walk alongside physician families every single day. I understand this journey not as a professional who serves your niche, but as someone who has lived inside it. This guide is my gift to you.</p>
+        <p class="body-text" style="margin-top:10px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(11px,1.4vw,15px);color:var(--navy)">— Sunit Brar</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ PAGE 3 — WHY SACRAMENTO ══════════════════════════════════════ -->
+<div class="page" id="p3">
+  <div class="gold-bar-top"></div>
+  <div class="gold-bar-bottom"></div>
+  <div class="page-inner">
+    <div>
+      <div class="page-label anim-1">The Region</div>
+      <h2 class="section anim-1">Why Sacramento &amp; Placer County?</h2>
+      <div class="gold-rule anim-2"></div>
+    </div>
+    <div class="stat-grid anim-2">
+      <div class="stat-card"><div class="stat-num">2.6M</div><div class="stat-lbl">Metro Population</div><div class="stat-sub">4th largest in CA</div></div>
+      <div class="stat-card"><div class="stat-num">$530K</div><div class="stat-lbl">Median Home Value</div><div class="stat-sub">2.2% annual growth</div></div>
+      <div class="stat-card"><div class="stat-num">269</div><div class="stat-lbl">Sunny Days/Year</div><div class="stat-sub">vs US avg of 205</div></div>
+      <div class="stat-card"><div class="stat-num">#1</div><div class="stat-lbl">Relocation Destination</div><div class="stat-sub">Redfin News ranking</div></div>
+      <div class="stat-card"><div class="stat-num">60%</div><div class="stat-lbl">Homeownership Rate</div><div class="stat-sub">Strong investment market</div></div>
+      <div class="stat-card"><div class="stat-num">$91K+</div><div class="stat-lbl">Median HH Income</div><div class="stat-sub">+6.69% growth</div></div>
+    </div>
+    <div class="two-col anim-3" style="height:auto;margin-top:4px">
+      <div>
+        <h3 class="sub">A city on the rise</h3>
+        <p class="body-text" style="margin-bottom:8px">Sacramento is one of California's most affordable major metros — and rapidly becoming a destination for medical professionals and families seeking quality of life without Bay Area prices.</p>
+        <h3 class="sub">Farm-to-Fork Capital of America</h3>
+        <p class="body-text" style="margin-bottom:8px">Over 40 farmers markets, world-class restaurants, and produce grown right in the region. For families who love fresh food and vibrant culture, this is a dream.</p>
+        <h3 class="sub">Outdoor lifestyle</h3>
+        <p class="body-text">Lake Tahoe 2 hours away. Napa Valley 1 hour. American River trails, Folsom Lake, and the Sierra foothills at your doorstep.</p>
+      </div>
+      <div>
+        <h3 class="sub">Medical excellence</h3>
+        <p class="body-text" style="margin-bottom:8px">UC Davis Medical Center, Sutter Health, Kaiser Permanente, Dignity Health, Adventist Health — one of California's strongest physician employment markets.</p>
+        <h3 class="sub">Diverse &amp; welcoming community</h3>
+        <p class="body-text" style="margin-bottom:8px">Sacramento is 17% Asian — with vibrant South Asian communities, Hindu temples, Sikh gurdwaras, Indian grocers, and cultural events throughout the region. The Sacramento area demographics: 42% White, 23% Hispanic, 17% Asian, 9% Black.</p>
+        <h3 class="sub">The climate you've been waiting for</h3>
+        <p class="body-text">After Ohio winters, Sacramento's 269 sunny days per year feels like a gift. Mild winters, warm summers, beautiful spring and fall.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ PAGE 4 — NEIGHBORHOODS ══════════════════════════════════════ -->
+<div class="page" id="p4">
+  <div class="gold-bar-top"></div>
+  <div class="gold-bar-bottom"></div>
+  <div class="page-inner">
+    <div>
+      <div class="page-label anim-1">Neighborhoods</div>
+      <h2 class="section anim-1">Finding Your Perfect Neighborhood</h2>
+      <div class="gold-rule anim-2"></div>
+    </div>
+    <div class="hood-grid anim-3">
+      <div class="hood-card">
+        <div class="badge">Sunit's Home · Your #1 Pick</div>
+        <div class="hood-name">Loomis</div>
+        <div class="hood-price">$700K – $1.1M</div>
+        <p class="body-text">Quiet, country-adjacent charm with oak trees and space. Similar feel to suburban Ohio — a little away from the main suburbs but close to everything. Strong local schools, tight-knit community. Home to Nexus Lounge &amp; VR.</p>
+      </div>
+      <div class="hood-card">
+        <div class="badge">Most Prestigious</div>
+        <div class="hood-name">Granite Bay</div>
+        <div class="hood-price">$900K – $1.5M+</div>
+        <p class="body-text">One of the most sought-after zip codes in Northern California. Folsom Lake access, top-rated Eureka Union schools, very low crime. Ideal for attendings with families.</p>
+      </div>
+      <div class="hood-card">
+        <div class="badge">Best Value</div>
+        <div class="hood-name">Rocklin</div>
+        <div class="hood-price">$550K – $850K</div>
+        <p class="body-text">Rolling hills, Sierra views, award-winning schools, excellent safety. Quarry Park Adventures. Strong Indian-American community presence.</p>
+      </div>
+      <div class="hood-card">
+        <div class="badge">Growing Fast</div>
+        <div class="hood-name">Lincoln</div>
+        <div class="hood-price">$500K – $750K</div>
+        <p class="body-text">Family-oriented with new construction options. More land for your dollar. Community-focused with events and activities throughout the year.</p>
+      </div>
+      <div class="hood-card">
+        <div class="badge">Most Walkable</div>
+        <div class="hood-name">Roseville</div>
+        <div class="hood-price">$550K – $800K</div>
+        <p class="body-text">Highly ranked schools, great shopping, restaurants. Adventist Health right here. Tech giants HP and Oracle are major employers. Very convenient central location.</p>
+      </div>
+      <div class="hood-card">
+        <div class="badge">Outdoor Lovers</div>
+        <div class="hood-name">Folsom</div>
+        <div class="hood-price">$600K – $900K</div>
+        <p class="body-text">Consistently rated one of the best cities to raise a family. Incredible school district, Folsom Lake, miles of trails. Historic Sutter Street. Strong family culture.</p>
+      </div>
+    </div>
+    <div class="anim-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px">
+      <div style="background:var(--gray-light);border-radius:4px;padding:10px 12px">
+        <div style="font-weight:600;font-size:clamp(8px,0.95vw,11px);color:var(--navy)">East Sacramento</div>
+        <div style="font-size:clamp(7px,0.8vw,9px);color:var(--gold);margin-bottom:3px">$750K – $1.1M</div>
+        <p class="body-text">Historic charm, renowned private schools, fine dining.</p>
+      </div>
+      <div style="background:var(--gray-light);border-radius:4px;padding:10px 12px">
+        <div style="font-weight:600;font-size:clamp(8px,0.95vw,11px);color:var(--navy)">El Dorado Hills</div>
+        <div style="font-size:clamp(7px,0.8vw,9px);color:var(--gold);margin-bottom:3px">$750K – $1.2M</div>
+        <p class="body-text">Panoramic Sierra views, wineries, peaceful setting.</p>
+      </div>
+      <div style="background:var(--gray-light);border-radius:4px;padding:10px 12px">
+        <div style="font-weight:600;font-size:clamp(8px,0.95vw,11px);color:var(--navy)">Elk Grove</div>
+        <div style="font-size:clamp(7px,0.8vw,9px);color:var(--gold);margin-bottom:3px">$550K – $750K</div>
+        <p class="body-text">Family-focused, man-made lakes, excellent schools, diverse community.</p>
+      </div>
+      <div style="background:var(--gray-light);border-radius:4px;padding:10px 12px">
+        <div style="font-weight:600;font-size:clamp(8px,0.95vw,11px);color:var(--navy)">Midtown Sacramento</div>
+        <div style="font-size:clamp(7px,0.8vw,9px);color:var(--gold);margin-bottom:3px">$600K – $850K</div>
+        <p class="body-text">Vibrant urban energy, walkable, arts and restaurant scene.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ PAGE 5 — COMMUNITY ══════════════════════════════════════ -->
+<div class="page" id="p5">
+  <div class="gold-bar-top"></div>
+  <div class="gold-bar-bottom"></div>
+  <div class="page-inner">
+    <div>
+      <div class="page-label anim-1">Community &amp; Belonging</div>
+      <h2 class="section anim-1">Finding Your People in Sacramento</h2>
+      <div class="gold-rule anim-2"></div>
+    </div>
+    <div class="two-col anim-3">
+      <div class="comm-left">
+        <h3 class="sub" style="color:var(--gold-light);margin-bottom:6px">South Asian Community</h3>
+        <p class="body-text" style="color:rgba(255,255,255,0.75);margin-bottom:10px">One of the first things that surprised and delighted me when we arrived was how vibrant the South Asian community is here. Coming from Ohio, I wasn't sure what to expect — and this community exceeded every hope.</p>
+        <div style="margin-bottom:8px">
+          <div class="phase-head" style="color:var(--gold-light)">Places of Worship</div>
+          <p class="bullet" style="color:rgba(255,255,255,0.7)">Hindu temples throughout Sacramento &amp; Placer County</p>
+          <p class="bullet" style="color:rgba(255,255,255,0.7)">Sikh gurdwaras serving the community across the region</p>
+          <p class="bullet" style="color:rgba(255,255,255,0.7)">Active religious communities with regular events &amp; celebrations</p>
+        </div>
+        <div style="margin-bottom:8px">
+          <div class="phase-head" style="color:var(--gold-light)">Grocery &amp; Food</div>
+          <p class="bullet" style="color:rgba(255,255,255,0.7)">Indian and Asian grocery stores in Sacramento, Roseville &amp; Elk Grove</p>
+          <p class="bullet" style="color:rgba(255,255,255,0.7)">Authentic Indian restaurants growing throughout the region</p>
+          <p class="bullet" style="color:rgba(255,255,255,0.7)">Farmers markets with diverse produce year-round</p>
+        </div>
+        <div>
+          <div class="phase-head" style="color:var(--gold-light)">Community Connection</div>
+          <p class="bullet" style="color:rgba(255,255,255,0.7)">Active Facebook &amp; WhatsApp groups for Indian families in Placer County</p>
+          <p class="bullet" style="color:rgba(255,255,255,0.7)">Cultural events &amp; festivals celebrated throughout the year</p>
+          <p class="bullet" style="color:rgba(255,255,255,0.7)">Strong physician community networks &amp; professional groups</p>
+        </div>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(9px,1.1vw,13px);color:var(--gold-light);margin-top:12px">I will personally connect you with community members the moment you decide to make the move.</p>
+      </div>
+      <div>
+        <h3 class="sub">10 Tips for a Smooth Physician Family Relocation</h3>
+        <div style="margin-top:6px">
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="display:flex;gap:8px;align-items:flex-start">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.6vw,18px);color:var(--gold);font-weight:600;min-width:18px;line-height:1">1</span>
+              <div><div style="font-weight:600;font-size:clamp(7px,0.85vw,10px);color:var(--navy)">Start the home search early</div><p class="body-text">Physician schedules are demanding — begin 3–4 months before your start date.</p></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:flex-start">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.6vw,18px);color:var(--gold);font-weight:600;min-width:18px;line-height:1">2</span>
+              <div><div style="font-weight:600;font-size:clamp(7px,0.85vw,10px);color:var(--navy)">Prioritize schools first</div><p class="body-text">Then find neighborhoods that match. Schools drive everything for families.</p></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:flex-start">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.6vw,18px);color:var(--gold);font-weight:600;min-width:18px;line-height:1">3</span>
+              <div><div style="font-weight:600;font-size:clamp(7px,0.85vw,10px);color:var(--navy)">Get physician loan pre-approval</div><p class="body-text">Qualify with deferred student loans and just an employment contract — before your first paycheck.</p></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:flex-start">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.6vw,18px);color:var(--gold);font-weight:600;min-width:18px;line-height:1">4</span>
+              <div><div style="font-weight:600;font-size:clamp(7px,0.85vw,10px);color:var(--navy)">Consider renting first if timing is tight</div><p class="body-text">A 6–12 month rental lets you buy without pressure after settling in.</p></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:flex-start">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.6vw,18px);color:var(--gold);font-weight:600;min-width:18px;line-height:1">5</span>
+              <div><div style="font-weight:600;font-size:clamp(7px,0.85vw,10px);color:var(--navy)">Visit in person if possible</div><p class="body-text">Photos don't capture the feel of a neighborhood. A community tour is worth the trip.</p></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:flex-start">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.6vw,18px);color:var(--gold);font-weight:600;min-width:18px;line-height:1">6</span>
+              <div><div style="font-weight:600;font-size:clamp(7px,0.85vw,10px);color:var(--navy)">Think about your spouse's needs</div><p class="body-text">Career, community, proximity to family — these matter as much as the hospital location.</p></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:flex-start">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.6vw,18px);color:var(--gold);font-weight:600;min-width:18px;line-height:1">7</span>
+              <div><div style="font-weight:600;font-size:clamp(7px,0.85vw,10px);color:var(--navy)">Find the community within the community</div><p class="body-text">Cultural fit matters. Look for where your whole family will feel welcome and at home.</p></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:flex-start">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.6vw,18px);color:var(--gold);font-weight:600;min-width:18px;line-height:1">8</span>
+              <div><div style="font-weight:600;font-size:clamp(7px,0.85vw,10px);color:var(--navy)">Test the commute</div><p class="body-text">Sacramento traffic is mild, but drive from your target neighborhood to your hospital.</p></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:flex-start">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.6vw,18px);color:var(--gold);font-weight:600;min-width:18px;line-height:1">9</span>
+              <div><div style="font-weight:600;font-size:clamp(7px,0.85vw,10px);color:var(--navy)">Build your support network early</div><p class="body-text">Physician schedules are demanding. Your partner needs friends and resources close by.</p></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:flex-start">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.6vw,18px);color:var(--gold);font-weight:600;min-width:18px;line-height:1">10</span>
+              <div><div style="font-weight:600;font-size:clamp(7px,0.85vw,10px);color:var(--navy)">Use an agent who truly gets it</div><p class="body-text">There's a difference between an agent who serves physicians and one who has lived this journey.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ PAGE 6 — SCHOOLS ══════════════════════════════════════ -->
+<div class="page" id="p6">
+  <div class="gold-bar-top"></div>
+  <div class="gold-bar-bottom"></div>
+  <div class="page-inner">
+    <div>
+      <div class="page-label anim-1">Education</div>
+      <h2 class="section anim-1">Top Schools in Sacramento &amp; Placer County</h2>
+      <div class="gold-rule anim-2"></div>
+    </div>
+    <div class="two-col anim-3">
+      <div>
+        <h3 class="sub" style="margin-bottom:6px">Public School Districts</h3>
+        <div class="school-row"><div class="school-name">Loomis Union</div><div class="school-area">Loomis / Placer County</div><p class="body-text">Highly rated K–8. H. Clarke Powers Elementary is a standout. Strong parent involvement.</p></div>
+        <div class="school-row"><div class="school-name">Eureka Union</div><div class="school-area">Granite Bay / Roseville</div><p class="body-text">Consistently top-ranked in California. Excellent academic outcomes.</p></div>
+        <div class="school-row"><div class="school-name">Rocklin Unified</div><div class="school-area">Rocklin</div><p class="body-text">Whitney High School avg SAT 1240. Strong arts, athletics, and academics.</p></div>
+        <div class="school-row"><div class="school-name">Roseville Joint / City</div><div class="school-area">Roseville</div><p class="body-text">Woodcreek High, multiple top elementary schools including Diamond Creek.</p></div>
+        <div class="school-row"><div class="school-name">Folsom-Cordova Unified</div><div class="school-area">Folsom</div><p class="body-text">Folsom High: 97% graduation, avg SAT 1320. Sandra J. Gallardo Elementary is exceptional.</p></div>
+        <div class="school-row"><div class="school-name">Davis Joint Unified</div><div class="school-area">Davis</div><p class="body-text">Davis Senior High avg SAT 1340. UC Davis community — extraordinarily educated parent base.</p></div>
+        <div class="school-row"><div class="school-name">Placer Union / Del Oro</div><div class="school-area">Loomis / Auburn</div><p class="body-text">Del Oro High in Loomis: 96% graduation, avg SAT 1240. Excellent local choice.</p></div>
+      </div>
+      <div>
+        <h3 class="sub" style="margin-bottom:6px">Notable Private Schools</h3>
+        <div class="school-row"><div class="school-name">The Goddard School</div><div class="school-area">Folsom, Rancho Cordova, Rocklin</div><p class="body-text">Play-based early childhood education — excellent for youngest children of relocating physicians.</p></div>
+        <div class="school-row"><div class="school-name">Sacramento Country Day</div><div class="school-area">Sacramento</div><p class="body-text">K–12 college prep. Rigorous academics, 100% college placement.</p></div>
+        <div class="school-row"><div class="school-name">Jesuit High School</div><div class="school-area">Carmichael</div><p class="body-text">Premier Catholic college prep for young men. 99% college placement.</p></div>
+        <div class="school-row"><div class="school-name">St. Francis High School</div><div class="school-area">Sacramento</div><p class="body-text">Premier Catholic college prep for young women. 100% college attendance most years.</p></div>
+        <div class="school-row"><div class="school-name">Sacramento Waldorf School</div><div class="school-area">Fair Oaks</div><p class="body-text">One of the oldest and largest Waldorf schools in North America. Beautiful 22-acre campus.</p></div>
+        <div class="school-row"><div class="school-name">Shalom School</div><div class="school-area">Sacramento</div><p class="body-text">Outstanding Jewish community day school with rigorous academics and nurturing environment.</p></div>
+        <div class="school-row"><div class="school-name">Bradshaw Christian School</div><div class="school-area">Sacramento</div><p class="body-text">K–12, 1,100 students. Strong emphasis on academics and character development.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ PAGE 7 — LIFESTYLE ══════════════════════════════════════ -->
+<div class="page" id="p7">
+  <div class="gold-bar-top"></div>
+  <div class="gold-bar-bottom"></div>
+  <div class="page-inner">
+    <div>
+      <div class="page-label anim-1">Lifestyle</div>
+      <h2 class="section anim-1">What Life Actually Looks Like Here</h2>
+      <div class="gold-rule anim-2"></div>
+    </div>
+    <div class="two-col anim-3">
+      <div>
+        <div class="life-card" style="margin-bottom:8px">
+          <h3 class="sub" style="color:var(--gold-light);margin-bottom:6px">Nexus Lounge &amp; VR — Loomis</h3>
+          <p class="body-text" style="color:rgba(255,255,255,0.75)">Premium VR entertainment lounge, café, and private event space — right in your new neighborhood. Perfect for family nights out, birthday parties, or hospital department team-building events. Something Placer County has never seen before, and a place your family will come to love.</p>
+        </div>
+        <h3 class="sub">Outdoor Adventures</h3>
+        <p class="bullet">Folsom Lake — hiking, biking, boating, 75 miles of trails year-round</p>
+        <p class="bullet">American River Parkway — 32 miles of trails from Sacramento to Folsom</p>
+        <p class="bullet">Quarry Park Adventures, Rocklin — zip lines, rock climbing, paddle boats</p>
+        <p class="bullet">Lake Tahoe — 2 hours away, world-class skiing and beaches</p>
+        <p class="bullet">Cosumnes River Preserve — 11 miles of trails, 250+ bird species</p>
+        <div style="margin-top:8px">
+          <h3 class="sub">Wineries &amp; Breweries</h3>
+          <p class="body-text">Amador County wine country is one hour away. Excellent local craft breweries in Folsom and Auburn. 40+ farmers markets region-wide — including one at Sutter Medical Center every Thursday.</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="sub">South Asian Cultural Events</h3>
+        <p class="body-text" style="margin-bottom:8px">Diwali, Navratri, Punjabi cultural festivals and more are celebrated throughout the year across Sacramento and Placer County. Active Facebook and WhatsApp groups keep the community connected — newcomers are welcomed immediately and warmly.</p>
+        <h3 class="sub">Farmers Markets</h3>
+        <p class="bullet">Historic Folsom Plaza — Saturdays 8am–1pm, year round</p>
+        <p class="bullet">Midtown Sutter Health Market — Saturdays 9am–1pm</p>
+        <p class="bullet">Blue Oaks Market, Rocklin — Saturdays June–October</p>
+        <p class="bullet">Davis Market — Saturdays year round</p>
+        <div style="margin-top:8px">
+          <h3 class="sub">Sports &amp; Entertainment</h3>
+          <p class="bullet">Sacramento Kings (NBA) — Golden 1 Center downtown</p>
+          <p class="bullet">Sacramento River Cats — family-friendly summer baseball</p>
+          <p class="bullet">Sacramento Republic FC — passionate local soccer culture</p>
+        </div>
+        <div style="margin-top:8px">
+          <h3 class="sub">Dog Parks</h3>
+          <p class="body-text">Saugstad Off Leash in Roseville, Rruff Off Leash in Rocklin, Fido Field in Folsom — Placer County is wonderfully dog-friendly. Your pets will love it here too.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ PAGE 8 — LOANS + HOW I HELP ══════════════════════════════════════ -->
+<div class="page" id="p8">
+  <div class="gold-bar-top"></div>
+  <div class="gold-bar-bottom"></div>
+  <div class="page-inner">
+    <div>
+      <div class="page-label anim-1">Financing &amp; Services</div>
+      <h2 class="section anim-1">Physician Loans &amp; How Sunit Helps You</h2>
+      <div class="gold-rule anim-2"></div>
+    </div>
+    <div class="two-col anim-3">
+      <div>
+        <h3 class="sub">Physician Loan Programs</h3>
+        <p class="body-text" style="margin-bottom:8px">Most physicians relocating to Sacramento don't realize how favorable their financing options are. Physician mortgage programs are designed specifically for medical professionals.</p>
+        <div style="background:var(--gold-pale);border-radius:4px;padding:12px;margin-bottom:8px;border-left:3px solid var(--gold)">
+          <div class="phase-head" style="margin-top:0">Key Advantages</div>
+          <p class="bullet">0–5% down payment on homes up to $1.5M+ with no PMI</p>
+          <p class="bullet">Student loans excluded or calculated differently from DTI ratios</p>
+          <p class="bullet">Employment contract accepted — close before your first paycheck</p>
+          <p class="bullet">Available to MD, DO, DDS, DMD, PharmD and other designations</p>
+          <p class="bullet">Higher loan limits than conventional conforming loans</p>
+        </div>
+        <h3 class="sub">For Residents &amp; Fellows</h3>
+        <p class="body-text">Residents and fellows qualify too — often with the same terms as attendings. If you're matched to UC Davis, Sutter, Adventist, or another Sacramento program, you may be able to buy instead of rent from day one and build equity during your training years.</p>
+        <div style="margin-top:8px;background:var(--navy);border-radius:4px;padding:12px">
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(10px,1.3vw,15px);color:var(--gold-light);line-height:1.5">I work with lenders who specialize exclusively in physician mortgage programs and know exactly how to structure your financing for maximum advantage.</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="sub">How Sunit Helps You — Before, During &amp; After</h3>
+        <div class="phase-head" style="margin-top:8px">Before You Arrive</div>
+        <p class="bullet">Virtual community tour — walk through neighborhoods via video call from anywhere</p>
+        <p class="bullet">School district deep-dive tailored to your children's ages and priorities</p>
+        <p class="bullet">Neighborhood matching based on your lifestyle and community preferences</p>
+        <p class="bullet">Physician lender introductions for the strongest pre-approval</p>
+        <p class="bullet">Connect you to the South Asian community before you ever land</p>
+        <div class="phase-head">During the Search</div>
+        <p class="bullet">In-person community tour when you visit — I'm your guide, not just your agent</p>
+        <p class="bullet">Access to off-market and new construction opportunities</p>
+        <p class="bullet">Full negotiation expertise — many physician clients purchase sight-unseen</p>
+        <p class="bullet">Completely flexible around your hospital schedule</p>
+        <div class="phase-head">After You Close</div>
+        <p class="bullet">Trusted vendor referrals — contractors, pediatricians, restaurants, everything</p>
+        <p class="bullet">Ongoing resource for all neighborhood and community questions</p>
+        <p class="bullet">Connection to cultural events, community groups, and social networks</p>
+        <p class="bullet">A portion of every commission donated to Parkinson's research in your honor</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ PAGE 9 — BACK COVER ══════════════════════════════════════ -->
+<div class="page" id="p9">
+  <div class="gold-bar-top"></div>
+  <div class="gold-bar-bottom"></div>
+  <div class="cover-side-left"></div>
+  <div class="cover-side-right"></div>
+  <div class="page-inner">
+    <div class="back-center">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,36px);font-weight:600;color:var(--white);line-height:1.2;margin-bottom:12px" class="anim-1">Ready to find your home<br>in Placer County?</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(11px,1.5vw,17px);color:var(--gold-light);margin-bottom:20px" class="anim-2">I'd love to be your guide — the way I wish someone had been mine.</div>
+      <div style="width:80px;height:1px;background:var(--gold);margin:0 auto 20px" class="anim-2"></div>
+      <div style="background:var(--navy-mid);border:1px solid rgba(184,150,110,0.3);border-radius:6px;padding:24px 40px;display:inline-block" class="anim-3">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.5vw,28px);font-weight:600;color:var(--white);margin-bottom:4px">Sunit Brar</div>
+        <div style="font-size:clamp(8px,1vw,12px);color:var(--gold);letter-spacing:0.06em;margin-bottom:2px">REALTOR® · Stone Real Estate · DRE# 02125592</div>
+        <div style="font-size:clamp(8px,1vw,11px);color:var(--gold-light);margin-bottom:12px">Placer County Specialist · Physician Family Relocation Expert</div>
+        <div style="font-size:clamp(10px,1.3vw,15px);font-weight:600;color:var(--white);margin-bottom:4px">(216) 288-2096</div>
+        <div style="font-size:clamp(8px,0.95vw,11px);color:rgba(245,237,224,0.8)">sunitrealtor@gmail.com · sunitbrarrealtor.com</div>
+      </div>
+      <div style="margin-top:20px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(9px,1.2vw,14px);color:var(--gold-light);max-width:500px;margin-left:auto;margin-right:auto;line-height:1.6" class="anim-4">"A portion of every transaction I close is donated to a Parkinson's nonprofit — because giving back is at the heart of everything I do."</div>
+      <div style="margin-top:14px;font-size:clamp(7px,0.8vw,10px);color:var(--gray-mid);letter-spacing:0.08em" class="anim-5">MOVING MEDICINE PARTNERS MEMBER · DRS NETWORK AGENT · STONE REAL ESTATE</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /book -->
+</div><!-- /book-container -->
+
+<!-- DOTS -->
+<div id="dots">
+  <div class="dot active" onclick="goTo(0)"></div>
+  <div class="dot" onclick="goTo(1)"></div>
+  <div class="dot" onclick="goTo(2)"></div>
+  <div class="dot" onclick="goTo(3)"></div>
+  <div class="dot" onclick="goTo(4)"></div>
+  <div class="dot" onclick="goTo(5)"></div>
+  <div class="dot" onclick="goTo(6)"></div>
+  <div class="dot" onclick="goTo(7)"></div>
+  <div class="dot" onclick="goTo(8)"></div>
+</div>
+
+<script>
+  const pages = document.querySelectorAll('.page');
+  const dots = document.querySelectorAll('.dot');
+  const counter = document.getElementById('page-counter');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  let current = 0;
+
+  function goTo(idx) {
+    if (idx < 0 || idx >= pages.length || idx === current) return;
+    const direction = idx > current ? 1 : -1;
+    pages[current].classList.remove('active');
+    pages[current].classList.add(direction > 0 ? 'exit-left' : '');
+    setTimeout(() => pages[current < 0 ? 0 : current].classList.remove('exit-left'), 550);
+    current = idx;
+    pages[current].classList.add('active');
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    counter.textContent = `${current + 1} / ${pages.length}`;
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === pages.length - 1;
+  }
+
+  function changePage(dir) { goTo(current + dir); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') changePage(1);
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') changePage(-1);
+  });
+
+  // Swipe support
+  let touchStartX = 0;
+  document.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+  document.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) changePage(diff > 0 ? 1 : -1);
+  });
+</script>
+</body>
+</html>
