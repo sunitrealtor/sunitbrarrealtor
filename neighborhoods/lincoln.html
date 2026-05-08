@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lincoln CA real estate — new construction, more land, family-friendly community, Sun City. Your neighborhood guide from Placer County specialist Sunit Brar.">
+<title>Lincoln CA Homes & Neighborhood Guide | Sunit Brar Realtor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --deep:#3D2314; --terra:#8B4A2B; --sienna:#C4956A; --cream:#F5EDE4; --stone:#DDD0C4; --ink:#1c1a18; --muted:#7a6a5e; --white:#ffffff; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; color: var(--ink); background: var(--white); font-size: 16px; line-height: 1.7; }
+  a { color: inherit; text-decoration: none; }
+  nav { background: var(--deep); display: flex; justify-content: space-between; align-items: center; padding: 0 5%; height: 68px; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--cream); }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { font-size: 12px; color: rgba(245,237,228,0.65); letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--sienna); }
+  .nav-cta { background: var(--sienna); color: var(--deep) !important; font-weight: 500 !important; padding: 9px 20px; border-radius: 4px; }
+  .hood-hero { background: var(--deep); padding: 72px 5% 64px; }
+  .hood-hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .hood-breadcrumb { font-size: 11px; color: rgba(245,237,228,0.4); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
+  .hood-breadcrumb a { color: var(--sienna); }
+  .hood-tag { display: inline-block; background: rgba(196,149,106,0.2); color: var(--sienna); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 14px; border-radius: 3px; margin-bottom: 16px; font-weight: 500; }
+  .hood-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 60px); font-weight: 700; line-height: 1.1; margin-bottom: 18px; color: var(--cream); }
+  .hood-sub { font-size: 16px; color: rgba(245,237,228,0.6); font-weight: 300; line-height: 1.75; margin-bottom: 32px; }
+  .hood-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; }
+  .hood-stat { background: rgba(255,255,255,0.04); padding: 18px; }
+  .hood-stat-n { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700; color: var(--sienna); line-height: 1; }
+  .hood-stat-l { font-size: 11px; color: rgba(245,237,228,0.45); margin-top: 4px; font-weight: 300; }
+  .hood-map { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; height: 300px; }
+  .hood-map iframe { width: 100%; height: 100%; border: none; }
+  section { padding: 72px 5%; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 10px; font-weight: 500; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 40px); font-weight: 700; color: var(--deep); line-height: 1.15; margin-bottom: 32px; }
+  .highlights-section { background: var(--cream); }
+  .highlights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .highlight-card { background: var(--white); border: 1px solid var(--stone); border-radius: 8px; padding: 24px; }
+  .highlight-icon { font-size: 28px; margin-bottom: 12px; }
+  .highlight-title { font-size: 15px; font-weight: 500; color: var(--deep); margin-bottom: 8px; }
+  .highlight-desc { font-size: 13px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+  .market-section { background: var(--white); }
+  .market-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .market-body { font-size: 15px; color: var(--muted); line-height: 1.85; font-weight: 300; margin-bottom: 20px; }
+  .price-table { width: 100%; border-collapse: collapse; }
+  .price-table th { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terra); font-weight: 500; padding: 10px 0; border-bottom: 2px solid var(--stone); text-align: left; }
+  .price-table td { font-size: 14px; color: var(--ink); padding: 12px 0; border-bottom: 1px solid var(--stone); font-weight: 300; }
+  .price-table td:last-child { font-weight: 500; color: var(--deep); text-align: right; }
+  .agent-note { background: var(--deep); padding: 64px 5%; }
+  .agent-note-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 200px 1fr; gap: 48px; align-items: center; }
+  .agent-photo { width: 100%; border-radius: 8px; object-fit: cover; aspect-ratio: 1; }
+  .agent-eyebrow { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sienna); margin-bottom: 10px; font-weight: 500; }
+  .agent-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700; color: var(--cream); line-height: 1.2; margin-bottom: 14px; }
+  .agent-body { font-size: 14px; color: rgba(245,237,228,0.65); line-height: 1.8; font-weight: 300; margin-bottom: 20px; }
+  .agent-btn { display: inline-block; background: var(--sienna); color: var(--deep); padding: 12px 24px; border-radius: 4px; font-size: 13px; font-weight: 500; }
+  .other-section { background: var(--cream); padding: 64px 5%; }
+  .other-inner { max-width: 1100px; margin: 0 auto; }
+  .other-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+  .other-card { background: var(--white); border: 1px solid var(--stone); border-radius: 8px; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; transition: border-color 0.2s; }
+  .other-card:hover { border-color: var(--sienna); }
+  .other-name { font-size: 16px; font-weight: 500; color: var(--deep); }
+  .other-price { font-size: 12px; color: var(--muted); margin-top: 3px; font-weight: 300; }
+  .other-arrow { color: var(--sienna); font-size: 18px; }
+  .bottom-cta { background: var(--terra); padding: 64px 5%; text-align: center; }
+  .bottom-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--cream); margin-bottom: 12px; }
+  .bottom-cta p { font-size: 16px; color: rgba(245,237,228,0.75); margin-bottom: 32px; font-weight: 300; }
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-cream { background: var(--cream); color: var(--deep); padding: 14px 28px; border-radius: 4px; font-size: 14px; font-weight: 500; }
+  .btn-outline { border: 1px solid rgba(245,237,228,0.4); color: var(--cream); padding: 14px 28px; border-radius: 4px; font-size: 14px; font-weight: 300; }
+  footer { background: var(--deep); padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid rgba(245,237,228,0.08); }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--cream); font-weight: 600; }
+  .footer-info { font-size: 12px; color: rgba(245,237,228,0.4); margin-top: 4px; font-weight: 300; }
+  .footer-contact { font-size: 13px; color: rgba(245,237,228,0.6); line-height: 1.9; text-align: right; }
+  .footer-contact a { color: var(--sienna); }
+  @media (max-width: 900px) {
+    .hood-hero-inner, .market-grid, .agent-note-inner { grid-template-columns: 1fr; }
+    .highlights-grid, .other-grid { grid-template-columns: 1fr; }
+    .hood-map { height: 220px; }
+    nav ul { display: none; }
+    footer { flex-direction: column; text-align: center; }
+    .footer-contact { text-align: center; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">Sunit Brar</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#buy">Buy</a></li>
+    <li><a href="../index.html#sell">Sell</a></li>
+    <li><a href="../index.html#commercial">Commercial</a></li>
+    <li><a href="../physician-relocation.html">Physicians</a></li>
+    <li><a href="../relocation-guide.html">Relocate</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hood-hero">
+  <div class="hood-hero-inner">
+    <div>
+      <div class="hood-breadcrumb"><a href="../index.html">Home</a> &rarr; Neighborhoods &rarr; Lincoln</div>
+      <span class="hood-tag">Placer County · Growing Fast · Most Land for Your Dollar</span>
+      <h1 class="hood-title">Lincoln, CA</h1>
+      <p class="hood-sub">More land, newer construction, and a tight-knit community feel. Lincoln is where Placer County families go when they want space to breathe — and the best value per square foot in the region.</p>
+      <div class="hood-stats">
+        <div class="hood-stat"><div class="hood-stat-n">$500K–$750K</div><div class="hood-stat-l">Typical price range</div></div>
+        <div class="hood-stat"><div class="hood-stat-n">80%+</div><div class="hood-stat-l">Owner-occupied</div></div>
+        <div class="hood-stat"><div class="hood-stat-n">New</div><div class="hood-stat-l">Construction available</div></div>
+      </div>
+    </div>
+    <div class="hood-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49997!2d-121.293!3d38.891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b6b4b4b4b4b4b%3A0x1234!2sLincoln%2C+CA!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+
+<section class="highlights-section">
+  <div class="section-inner">
+    <div class="section-label">Why Lincoln</div>
+    <h2 class="section-title">Space, value, and community.<br>In that order.</h2>
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">🏗️</div>
+        <div class="highlight-title">New construction options</div>
+        <div class="highlight-desc">Lincoln has some of the best new construction communities in Placer County — modern floor plans, energy efficiency, builder warranties, and customization options not available in established neighborhoods.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🌳</div>
+        <div class="highlight-title">More land for your dollar</div>
+        <div class="highlight-desc">Lincoln consistently offers the largest lots at the most affordable prices in Placer County. If outdoor space, RV parking, a garden, or a pool matters to your family — Lincoln delivers.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">👴</div>
+        <div class="highlight-title">Sun City Lincoln Hills</div>
+        <div class="highlight-desc">One of Northern California's premier 55+ active adult communities. If you're relocating with parents or in-laws who want an exceptional retirement lifestyle, Sun City Lincoln Hills is world-class.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🏘️</div>
+        <div class="highlight-title">Community-focused lifestyle</div>
+        <div class="highlight-desc">Lincoln has a genuinely small-town feel with big-city access. Events, festivals, farmers markets, and active neighborhood associations make it one of the most community-engaged cities in the region.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">💰</div>
+        <div class="highlight-title">Best value in Placer County</div>
+        <div class="highlight-desc">For the same budget as a smaller home in Roseville or Rocklin, you can often get significantly more square footage and land in Lincoln. Strong equity growth as the city continues to develop.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">📍</div>
+        <div class="highlight-title">North Placer County access</div>
+        <div class="highlight-desc">Ideal for professionals working at facilities in north Placer County or Sutter County. 45–55 minutes to UC Davis. Easy access to Hwy 65 connecting to the broader Sacramento region.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="market-section">
+  <div class="section-inner">
+    <div class="section-label">Market overview</div>
+    <h2 class="section-title">What homes look like<br>in Lincoln.</h2>
+    <div class="market-grid">
+      <div>
+        <p class="market-body">Lincoln is the fastest-growing city in Placer County and one of the strongest value propositions in the entire Sacramento region. Families who want more space — a real backyard, an extra bedroom, room for extended family — consistently find that Lincoln delivers what other communities can't at the same price point.</p>
+        <p class="market-body">I recommend Lincoln most often to relocating families with children who want newer construction and to buyers whose extended family members are considering Sun City Lincoln Hills. Having multiple generations close together in the same region is something I understand personally.</p>
+        <p class="market-body">The commute to Sacramento is longer than Rocklin or Roseville — typically 45–55 minutes to UC Davis — so Lincoln works best for professionals with flexible schedules or those working in north Placer County.</p>
+      </div>
+      <div>
+        <table class="price-table">
+          <tr><th>Property type</th><th>Typical range</th></tr>
+          <tr><td>Starter single family</td><td>$500K – $600K</td></tr>
+          <tr><td>Move-up family home</td><td>$600K – $700K</td></tr>
+          <tr><td>New construction</td><td>$620K – $780K</td></tr>
+          <tr><td>Premium / larger lot</td><td>$720K – $900K+</td></tr>
+          <tr><td>Sun City 55+ homes</td><td>$450K – $700K</td></tr>
+          <tr><td>Owner-occupied rate</td><td>80%+</td></tr>
+          <tr><td>Community feel</td><td>Small town</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="agent-note">
+  <div class="agent-note-inner">
+    <img class="agent-photo" src="../sunit-brar.jpg" alt="Sunit Brar">
+    <div>
+      <div class="agent-eyebrow">From Sunit</div>
+      <div class="agent-title">Lincoln is for families who want to plant roots and have room to grow.</div>
+      <div class="agent-body">When relocating clients ask me where they can get the most home for their budget — and where they can imagine staying for 10 or 15 years — Lincoln comes up every time. The new construction options are excellent, the community feel is genuine, and Sun City Lincoln Hills is one of the best active adult communities in California for families bringing parents or in-laws along. If your schedule allows for the slightly longer commute, Lincoln rewards you with space and value that the other Placer County cities simply can't match at this price point.</div>
+      <a href="tel:2162882096" class="agent-btn">Call (216) 288-2096</a>
+    </div>
+  </div>
+</div>
+
+<div class="other-section">
+  <div class="other-inner">
+    <div class="section-label">Explore more neighborhoods</div>
+    <h2 class="section-title" style="margin-bottom:0">Compare other Placer County areas.</h2>
+    <div class="other-grid">
+      <a href="granite-bay.html" class="other-card">
+        <div><div class="other-name">Granite Bay</div><div class="other-price">$900K – $1.5M+ · Most prestigious</div></div>
+        <div class="other-arrow">&rarr;</div>
+      </a>
+      <a href="rocklin.html" class="other-card">
+        <div><div class="other-name">Rocklin</div><div class="other-price">$550K – $850K · Best value</div></div>
+        <div class="other-arrow">&rarr;</div>
+      </a>
+      <a href="roseville.html" class="other-card">
+        <div><div class="other-name">Roseville</div><div class="other-price">$550K – $800K · Most walkable</div></div>
+        <div class="other-arrow">&rarr;</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-cta">
+  <h2>Interested in Lincoln?</h2>
+  <p>Let's talk about new construction options and what's available right now.</p>
+  <div class="cta-btns">
+    <a href="https://www.realtor.com/realestateandhomes-search/Lincoln_CA" target="_blank" class="btn-cream">Search Lincoln homes</a>
+    <a href="tel:2162882096" class="btn-outline">Call (216) 288-2096</a>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">Sunit Brar · Stone Real Estate</div>
+    <div class="footer-info">DRE# 02125592 · 3500 Douglas Blvd, Roseville CA 95661</div>
+  </div>
+  <div class="footer-contact">
+    <a href="tel:2162882096">(216) 288-2096</a> &middot; <a href="mailto:sunitrealtor@gmail.com">sunitrealtor@gmail.com</a>
+  </div>
+</footer>
+</body>
+</html>
