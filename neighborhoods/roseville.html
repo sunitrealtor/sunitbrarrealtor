@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Roseville CA real estate — top schools, walkable lifestyle, HP & Oracle employers, Sutter Medical. Your neighborhood guide from Placer County specialist Sunit Brar.">
+<title>Roseville CA Homes & Neighborhood Guide | Sunit Brar Realtor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --deep:#3D2314; --terra:#8B4A2B; --sienna:#C4956A; --cream:#F5EDE4; --stone:#DDD0C4; --ink:#1c1a18; --muted:#7a6a5e; --white:#ffffff; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; color: var(--ink); background: var(--white); font-size: 16px; line-height: 1.7; }
+  a { color: inherit; text-decoration: none; }
+  nav { background: var(--deep); display: flex; justify-content: space-between; align-items: center; padding: 0 5%; height: 68px; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--cream); }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { font-size: 12px; color: rgba(245,237,228,0.65); letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--sienna); }
+  .nav-cta { background: var(--sienna); color: var(--deep) !important; font-weight: 500 !important; padding: 9px 20px; border-radius: 4px; }
+  .hood-hero { background: var(--deep); padding: 72px 5% 64px; }
+  .hood-hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .hood-breadcrumb { font-size: 11px; color: rgba(245,237,228,0.4); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
+  .hood-breadcrumb a { color: var(--sienna); }
+  .hood-tag { display: inline-block; background: rgba(196,149,106,0.2); color: var(--sienna); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 14px; border-radius: 3px; margin-bottom: 16px; font-weight: 500; }
+  .hood-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 60px); font-weight: 700; line-height: 1.1; margin-bottom: 18px; color: var(--cream); }
+  .hood-sub { font-size: 16px; color: rgba(245,237,228,0.6); font-weight: 300; line-height: 1.75; margin-bottom: 32px; }
+  .hood-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; }
+  .hood-stat { background: rgba(255,255,255,0.04); padding: 18px; }
+  .hood-stat-n { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700; color: var(--sienna); line-height: 1; }
+  .hood-stat-l { font-size: 11px; color: rgba(245,237,228,0.45); margin-top: 4px; font-weight: 300; }
+  .hood-map { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; height: 300px; }
+  .hood-map iframe { width: 100%; height: 100%; border: none; }
+  section { padding: 72px 5%; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 10px; font-weight: 500; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 40px); font-weight: 700; color: var(--deep); line-height: 1.15; margin-bottom: 32px; }
+  .highlights-section { background: var(--cream); }
+  .highlights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .highlight-card { background: var(--white); border: 1px solid var(--stone); border-radius: 8px; padding: 24px; }
+  .highlight-icon { font-size: 28px; margin-bottom: 12px; }
+  .highlight-title { font-size: 15px; font-weight: 500; color: var(--deep); margin-bottom: 8px; }
+  .highlight-desc { font-size: 13px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+  .market-section { background: var(--white); }
+  .market-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .market-body { font-size: 15px; color: var(--muted); line-height: 1.85; font-weight: 300; margin-bottom: 20px; }
+  .price-table { width: 100%; border-collapse: collapse; }
+  .price-table th { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terra); font-weight: 500; padding: 10px 0; border-bottom: 2px solid var(--stone); text-align: left; }
+  .price-table td { font-size: 14px; color: var(--ink); padding: 12px 0; border-bottom: 1px solid var(--stone); font-weight: 300; }
+  .price-table td:last-child { font-weight: 500; color: var(--deep); text-align: right; }
+  .schools-section { background: var(--cream); }
+  .schools-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .school-card { background: var(--white); border: 1px solid var(--stone); border-radius: 8px; padding: 20px 24px; }
+  .school-type { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terra); font-weight: 500; margin-bottom: 6px; }
+  .school-name { font-size: 16px; font-weight: 500; color: var(--deep); margin-bottom: 4px; }
+  .school-detail { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.6; }
+  .school-stat { font-size: 12px; color: var(--terra); margin-top: 6px; font-weight: 400; }
+  .agent-note { background: var(--deep); padding: 64px 5%; }
+  .agent-note-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 200px 1fr; gap: 48px; align-items: center; }
+  .agent-photo { width: 100%; border-radius: 8px; object-fit: cover; aspect-ratio: 1; }
+  .agent-eyebrow { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sienna); margin-bottom: 10px; font-weight: 500; }
+  .agent-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700; color: var(--cream); line-height: 1.2; margin-bottom: 14px; }
+  .agent-body { font-size: 14px; color: rgba(245,237,228,0.65); line-height: 1.8; font-weight: 300; margin-bottom: 20px; }
+  .agent-btn { display: inline-block; background: var(--sienna); color: var(--deep); padding: 12px 24px; border-radius: 4px; font-size: 13px; font-weight: 500; }
+  .other-section { background: var(--cream); padding: 64px 5%; }
+  .other-inner { max-width: 1100px; margin: 0 auto; }
+  .other-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+  .other-card { background: var(--white); border: 1px solid var(--stone); border-radius: 8px; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; transition: border-color 0.2s; }
+  .other-card:hover { border-color: var(--sienna); }
+  .other-name { font-size: 16px; font-weight: 500; color: var(--deep); }
+  .other-price { font-size: 12px; color: var(--muted); margin-top: 3px; font-weight: 300; }
+  .other-arrow { color: var(--sienna); font-size: 18px; }
+  .bottom-cta { background: var(--terra); padding: 64px 5%; text-align: center; }
+  .bottom-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--cream); margin-bottom: 12px; }
+  .bottom-cta p { font-size: 16px; color: rgba(245,237,228,0.75); margin-bottom: 32px; font-weight: 300; }
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-cream { background: var(--cream); color: var(--deep); padding: 14px 28px; border-radius: 4px; font-size: 14px; font-weight: 500; }
+  .btn-outline { border: 1px solid rgba(245,237,228,0.4); color: var(--cream); padding: 14px 28px; border-radius: 4px; font-size: 14px; font-weight: 300; }
+  footer { background: var(--deep); padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid rgba(245,237,228,0.08); }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--cream); font-weight: 600; }
+  .footer-info { font-size: 12px; color: rgba(245,237,228,0.4); margin-top: 4px; font-weight: 300; }
+  .footer-contact { font-size: 13px; color: rgba(245,237,228,0.6); line-height: 1.9; text-align: right; }
+  .footer-contact a { color: var(--sienna); }
+  @media (max-width: 900px) {
+    .hood-hero-inner, .market-grid, .agent-note-inner { grid-template-columns: 1fr; }
+    .highlights-grid, .schools-grid, .other-grid { grid-template-columns: 1fr; }
+    .hood-map { height: 220px; }
+    nav ul { display: none; }
+    footer { flex-direction: column; text-align: center; }
+    .footer-contact { text-align: center; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">Sunit Brar</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#buy">Buy</a></li>
+    <li><a href="../index.html#sell">Sell</a></li>
+    <li><a href="../index.html#commercial">Commercial</a></li>
+    <li><a href="../physician-relocation.html">Physicians</a></li>
+    <li><a href="../relocation-guide.html">Relocate</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hood-hero">
+  <div class="hood-hero-inner">
+    <div>
+      <div class="hood-breadcrumb"><a href="../index.html">Home</a> &rarr; Neighborhoods &rarr; Roseville</div>
+      <span class="hood-tag">Placer County · Most Walkable · Largest City</span>
+      <h1 class="hood-title">Roseville, CA</h1>
+      <p class="hood-sub">The most walkable city in Placer County. Great schools, diverse price points, Sutter Roseville Medical Center, and tech employers HP and Oracle. Everything in one place.</p>
+      <div class="hood-stats">
+        <div class="hood-stat"><div class="hood-stat-n">$550K–$800K</div><div class="hood-stat-l">Typical price range</div></div>
+        <div class="hood-stat"><div class="hood-stat-n">68%</div><div class="hood-stat-l">Owner-occupied</div></div>
+        <div class="hood-stat"><div class="hood-stat-n">$134K</div><div class="hood-stat-l">Avg household income</div></div>
+      </div>
+    </div>
+    <div class="hood-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49997!2d-121.288!3d38.752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b24d757a9fd05%3A0x1234!2sRoseville%2C+CA!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+
+<section class="highlights-section">
+  <div class="section-inner">
+    <div class="section-label">Why Roseville</div>
+    <h2 class="section-title">The complete package<br>in Placer County.</h2>
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">🏥</div>
+        <div class="highlight-title">Sutter Roseville Medical Center</div>
+        <div class="highlight-desc">One of the region's leading hospitals is right here in Roseville. For physicians joining Sutter Health, living in Roseville means a 5–15 minute commute to work.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">💼</div>
+        <div class="highlight-title">Major employers nearby</div>
+        <div class="highlight-desc">HP and Oracle are both headquartered in Roseville. The city has a strong tech economy that continues to attract educated professionals and remote workers from the Bay Area.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🛍️</div>
+        <div class="highlight-title">Best shopping &amp; dining</div>
+        <div class="highlight-desc">Roseville has the most diverse retail and restaurant scene in Placer County. Westfield Galleria, dozens of locally-owned restaurants, and everything in between.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🎓</div>
+        <div class="highlight-title">Highly ranked schools</div>
+        <div class="highlight-desc">Roseville City and Roseville Joint Union school districts are both highly rated. Woodcreek High School, Junction Elementary, and Diamond Creek Elementary are standouts.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🏘️</div>
+        <div class="highlight-title">Neighborhood variety</div>
+        <div class="highlight-desc">West Roseville near Hwy 65 has newer master-planned communities. East Roseville near Hwy 80 offers established neighborhoods with mature trees and larger lots.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">📍</div>
+        <div class="highlight-title">Central location</div>
+        <div class="highlight-desc">Right in the center of Placer County. Easy access to Rocklin, Lincoln, and Granite Bay. 35–45 minutes to UC Davis. Sacramento Airport is 25 minutes away.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="market-section">
+  <div class="section-inner">
+    <div class="section-label">Market overview</div>
+    <h2 class="section-title">What homes look like<br>in Roseville.</h2>
+    <div class="market-grid">
+      <div>
+        <p class="market-body">Roseville is the largest city in Placer County and offers the most variety in terms of price points, neighborhoods, and lifestyle. It's a natural first stop for relocating families who want options without committing to a specific community before they've had a chance to explore.</p>
+        <p class="market-body">I have closed transactions in Roseville and know both the west side newer communities and the established east side neighborhoods well. My office at Stone Real Estate is located at 3500 Douglas Blvd right here in Roseville.</p>
+        <p class="market-body">Roseville is also where I'd point any physician joining Sutter Health — the proximity to the medical center is hard to beat, and the school quality makes it ideal for families.</p>
+      </div>
+      <div>
+        <table class="price-table">
+          <tr><th>Property type</th><th>Typical range</th></tr>
+          <tr><td>Condo / townhome</td><td>$400K – $550K</td></tr>
+          <tr><td>Starter single family</td><td>$550K – $680K</td></tr>
+          <tr><td>Move-up family home</td><td>$680K – $800K</td></tr>
+          <tr><td>Premium / larger home</td><td>$800K – $950K+</td></tr>
+          <tr><td>Avg household income</td><td>$134,360</td></tr>
+          <tr><td>Owner-occupied rate</td><td>67.7%</td></tr>
+          <tr><td>Median age</td><td>40</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="schools-section">
+  <div class="section-inner">
+    <div class="section-label">Education</div>
+    <h2 class="section-title">Schools in Roseville.</h2>
+    <div class="schools-grid">
+      <div class="school-card">
+        <div class="school-type">Public High School</div>
+        <div class="school-name">Woodcreek High School</div>
+        <div class="school-detail">2551 Woodcreek Oaks Blvd, Roseville CA 95747 · (916) 771-6565</div>
+        <div class="school-stat">95% graduation rate · Avg SAT 1220 · 2,044 students</div>
+      </div>
+      <div class="school-card">
+        <div class="school-type">Public Elementary</div>
+        <div class="school-name">Junction Elementary</div>
+        <div class="school-detail">2150 Ellison Drive, Roseville CA 95747 · Roseville City</div>
+        <div class="school-stat">Top-rated · Student-Teacher Ratio 25:1 · 648 students</div>
+      </div>
+      <div class="school-card">
+        <div class="school-type">Public Elementary</div>
+        <div class="school-name">Diamond Creek Elementary</div>
+        <div class="school-detail">3151 Hopscotch Way, Roseville CA 95747 · Roseville City</div>
+        <div class="school-stat">Student-Teacher Ratio 23:1 · 716 students</div>
+      </div>
+      <div class="school-card">
+        <div class="school-type">Public Elementary</div>
+        <div class="school-name">William Kaseberg Elementary</div>
+        <div class="school-detail">1040 Main Street, Roseville CA 95678 · Roseville City</div>
+        <div class="school-stat">Student-Teacher Ratio 18:1 · 294 students</div>
+      </div>
+      <div class="school-card">
+        <div class="school-type">Public Junior High</div>
+        <div class="school-name">Olympus Junior High</div>
+        <div class="school-detail">2625 La Croix Drive, Roseville CA 95661 · Eureka Union</div>
+        <div class="school-stat">Student-Teacher Ratio 25:1 · 434 students</div>
+      </div>
+      <div class="school-card">
+        <div class="school-type">Private · Early Childhood</div>
+        <div class="school-name">The Goddard School — Roseville</div>
+        <div class="school-detail">Multiple Roseville locations · goddardschool.com</div>
+        <div class="school-stat">Play-based early childhood education</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="agent-note">
+  <div class="agent-note-inner">
+    <img class="agent-photo" src="../sunit-brar.jpg" alt="Sunit Brar">
+    <div>
+      <div class="agent-eyebrow">From Sunit</div>
+      <div class="agent-title">My office is in Roseville. I know every corner of this city.</div>
+      <div class="agent-body">Stone Real Estate is located at 3500 Douglas Blvd in Roseville — so this is truly my home market. I've helped clients find homes throughout Roseville and understand the difference between the west side new construction communities and the established east side neighborhoods with mature trees and larger lots. If you're joining Sutter Health or HP or Oracle, or simply want the most options for your budget in Placer County — Roseville is where to start.</div>
+      <a href="tel:2162882096" class="agent-btn">Call (216) 288-2096</a>
+    </div>
+  </div>
+</div>
+
+<div class="other-section">
+  <div class="other-inner">
+    <div class="section-label">Explore more neighborhoods</div>
+    <h2 class="section-title" style="margin-bottom:0">Compare other Placer County areas.</h2>
+    <div class="other-grid">
+      <a href="granite-bay.html" class="other-card">
+        <div><div class="other-name">Granite Bay</div><div class="other-price">$900K – $1.5M+ · Most prestigious</div></div>
+        <div class="other-arrow">&rarr;</div>
+      </a>
+      <a href="rocklin.html" class="other-card">
+        <div><div class="other-name">Rocklin</div><div class="other-price">$550K – $850K · Best value</div></div>
+        <div class="other-arrow">&rarr;</div>
+      </a>
+      <a href="lincoln.html" class="other-card">
+        <div><div class="other-name">Lincoln</div><div class="other-price">$500K – $750K · Growing fast</div></div>
+        <div class="other-arrow">&rarr;</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-cta">
+  <h2>Interested in Roseville?</h2>
+  <p>Let's find the right neighborhood and the right home for your family.</p>
+  <div class="cta-btns">
+    <a href="https://www.realtor.com/realestateandhomes-search/Roseville_CA" target="_blank" class="btn-cream">Search Roseville homes</a>
+    <a href="tel:2162882096" class="btn-outline">Call (216) 288-2096</a>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">Sunit Brar · Stone Real Estate</div>
+    <div class="footer-info">DRE# 02125592 · 3500 Douglas Blvd, Roseville CA 95661</div>
+  </div>
+  <div class="footer-contact">
+    <a href="tel:2162882096">(216) 288-2096</a> &middot; <a href="mailto:sunitrealtor@gmail.com">sunitrealtor@gmail.com</a>
+  </div>
+</footer>
+</body>
+</html>
