@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free physician relocation guide for Placer County and the Sacramento region. Neighborhoods, commute times, physician loan programs, and a printable checklist.">
+<title>Physician Relocation Guide — Placer County | Sunit Brar Realtor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --deep:   #3D2314;
+    --terra:  #8B4A2B;
+    --sienna: #C4956A;
+    --cream:  #F5EDE4;
+    --stone:  #DDD0C4;
+    --ink:    #1c1a18;
+    --muted:  #7a6a5e;
+    --white:  #ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; color: var(--ink); background: var(--white); font-size: 16px; line-height: 1.7; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* NAV */
+  nav { background: var(--deep); display: flex; justify-content: space-between; align-items: center; padding: 0 5%; height: 68px; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--cream); letter-spacing: 0.02em; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { font-size: 12px; font-weight: 400; color: rgba(245,237,228,0.65); letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--sienna); }
+  .nav-cta { background: var(--sienna); color: var(--deep) !important; font-weight: 500 !important; padding: 9px 20px; border-radius: 4px; }
+  .nav-cta:hover { background: var(--terra) !important; color: var(--cream) !important; }
+
+  /* HERO */
+  .guide-hero { background: var(--deep); padding: 72px 5% 64px; }
+  .guide-hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 440px; gap: 64px; align-items: center; }
+  .guide-tag { display: inline-block; background: rgba(196,149,106,0.2); color: var(--sienna); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 14px; border-radius: 3px; margin-bottom: 20px; font-weight: 500; }
+  .guide-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4.5vw, 56px); font-weight: 700; line-height: 1.1; margin-bottom: 20px; color: var(--cream); }
+  .guide-sub { font-size: 16px; color: rgba(245,237,228,0.6); font-weight: 300; line-height: 1.75; margin-bottom: 32px; }
+  .guide-checklist { list-style: none; }
+  .guide-checklist li { font-size: 14px; color: rgba(245,237,228,0.7); font-weight: 300; padding: 8px 0; border-bottom: 1px solid rgba(245,237,228,0.08); display: flex; align-items: center; gap: 12px; }
+  .guide-checklist li:last-child { border-bottom: none; }
+  .check { width: 20px; height: 20px; border-radius: 50%; background: rgba(196,149,106,0.15); border: 1px solid var(--sienna); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 11px; color: var(--sienna); }
+
+  /* FORM CARD */
+  .form-card { background: var(--white); border-radius: 12px; padding: 36px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
+  .form-card-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700; color: var(--deep); margin-bottom: 6px; line-height: 1.2; }
+  .form-card-sub { font-size: 13px; color: var(--muted); margin-bottom: 24px; font-weight: 300; }
+
+  /* FORM — placeholder only, Formspree to be wired later */
+  .form-group { margin-bottom: 16px; }
+  .form-label { display: block; font-size: 12px; font-weight: 500; color: var(--deep); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+  .form-input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid var(--stone);
+    border-radius: 6px;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--ink);
+    background: var(--white);
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-input:focus { border-color: var(--sienna); }
+  .form-input::placeholder { color: #bbb; }
+  .form-select {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid var(--stone);
+    border-radius: 6px;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--ink);
+    background: var(--white);
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .form-select:focus { border-color: var(--sienna); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .form-submit {
+    width: 100%;
+    background: var(--terra);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+    margin-top: 6px;
+  }
+  .form-submit:hover { background: var(--deep); }
+  .form-privacy { font-size: 11px; color: #bbb; text-align: center; margin-top: 12px; font-weight: 300; }
+
+  /* WHAT'S INSIDE */
+  .inside-section { padding: 80px 5%; background: var(--cream); }
+  .inside-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 10px; font-weight: 500; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 44px); font-weight: 700; color: var(--deep); line-height: 1.15; margin-bottom: 40px; }
+  .inside-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .inside-card { background: var(--white); border: 1px solid var(--stone); border-radius: 8px; padding: 28px; }
+  .inside-num { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 700; color: var(--stone); line-height: 1; margin-bottom: 12px; }
+  .inside-title { font-size: 16px; font-weight: 500; color: var(--deep); margin-bottom: 8px; }
+  .inside-desc { font-size: 14px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+
+  /* ABOUT STRIP */
+  .about-strip { background: var(--deep); padding: 72px 5%; }
+  .about-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 280px 1fr; gap: 56px; align-items: center; }
+  .about-photo { width: 100%; border-radius: 8px; object-fit: cover; aspect-ratio: 3/4; }
+  .about-eyebrow { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sienna); margin-bottom: 12px; font-weight: 500; }
+  .about-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3vw, 38px); font-weight: 700; color: var(--cream); line-height: 1.15; margin-bottom: 18px; }
+  .about-body { font-size: 15px; color: rgba(245,237,228,0.65); line-height: 1.85; font-weight: 300; margin-bottom: 28px; }
+  .about-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+  .about-tag { background: rgba(245,237,228,0.06); border: 1px solid rgba(245,237,228,0.15); color: rgba(245,237,228,0.6); font-size: 12px; padding: 5px 14px; border-radius: 3px; font-weight: 300; }
+
+  /* TESTIMONIAL */
+  .testimonial-section { padding: 80px 5%; background: var(--white); }
+  .testimonial-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+  .testimonial-quote { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 32px); font-weight: 600; color: var(--deep); line-height: 1.4; margin-bottom: 24px; font-style: italic; }
+  .testimonial-source { font-size: 13px; color: var(--muted); font-weight: 300; }
+  .testimonial-source strong { font-weight: 500; color: var(--terra); }
+
+  /* CTA */
+  .bottom-cta { background: var(--terra); padding: 64px 5%; text-align: center; }
+  .bottom-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--cream); margin-bottom: 12px; }
+  .bottom-cta p { font-size: 16px; color: rgba(245,237,228,0.75); margin-bottom: 32px; font-weight: 300; }
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-cream { background: var(--cream); color: var(--deep); padding: 14px 28px; border-radius: 4px; font-size: 14px; font-weight: 500; }
+  .btn-cream:hover { background: var(--white); }
+  .btn-outline { border: 1px solid rgba(245,237,228,0.4); color: var(--cream); padding: 14px 28px; border-radius: 4px; font-size: 14px; font-weight: 300; }
+
+  /* THANK YOU STATE */
+  .thankyou { display: none; text-align: center; padding: 20px 0; }
+  .thankyou-icon { font-size: 48px; margin-bottom: 16px; }
+  .thankyou-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700; color: var(--deep); margin-bottom: 10px; }
+  .thankyou-body { font-size: 14px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+
+  /* FOOTER */
+  footer { background: var(--deep); padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid rgba(245,237,228,0.08); }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--cream); font-weight: 600; }
+  .footer-info { font-size: 12px; color: rgba(245,237,228,0.4); margin-top: 4px; font-weight: 300; }
+  .footer-contact { font-size: 13px; color: rgba(245,237,228,0.6); line-height: 1.9; font-weight: 300; text-align: right; }
+  .footer-contact a { color: var(--sienna); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .guide-hero-inner { grid-template-columns: 1fr; }
+    .inside-grid { grid-template-columns: 1fr; }
+    .about-inner { grid-template-columns: 1fr; }
+    .about-photo { aspect-ratio: 4/3; max-width: 320px; }
+    .form-row { grid-template-columns: 1fr; }
+    nav ul { display: none; }
+    footer { flex-direction: column; text-align: center; }
+    .footer-contact { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Sunit Brar</a>
+  <ul class="nav-links">
+    <li><a href="index.html#buy">Buy</a></li>
+    <li><a href="index.html#sell">Sell</a></li>
+    <li><a href="index.html#commercial">Commercial</a></li>
+    <li><a href="physician-relocation.html">Physicians</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO WITH FORM -->
+<div class="guide-hero">
+  <div class="guide-hero-inner">
+    <div>
+      <span class="guide-tag">Free Download</span>
+      <h1 class="guide-title">The Physician's Guide to Relocating in Placer County</h1>
+      <p class="guide-sub">Everything you need to know before you sign — from someone who has been through it firsthand. My husband is a physician. I relocated here from Ohio. This guide is built on real experience, not generic advice.</p>
+      <ul class="guide-checklist">
+        <li><span class="check">✓</span> Neighborhood-by-neighborhood breakdown with price ranges</li>
+        <li><span class="check">✓</span> Real commute times to UC Davis, Sutter &amp; Kaiser</li>
+        <li><span class="check">✓</span> Physician loan program overview — 0% down options</li>
+        <li><span class="check">✓</span> 90-day relocation timeline &amp; printable checklist</li>
+        <li><span class="check">✓</span> School district comparison for Placer County</li>
+        <li><span class="check">✓</span> Lender recommendations who specialize in physician loans</li>
+      </ul>
+    </div>
+
+    <!-- LEAD CAPTURE FORM -->
+    <div class="form-card">
+      <div id="form-view">
+        <div class="form-card-title">Get your free guide</div>
+        <div class="form-card-sub">Enter your details below and I'll send it directly to your inbox.</div>
+        <!-- ACTION to be replaced with Formspree endpoint later -->
+        <form id="lead-form" action="#" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="first-name">First name</label>
+              <input class="form-input" type="text" id="first-name" name="first_name" placeholder="Sarah" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="last-name">Last name</label>
+              <input class="form-input" type="text" id="last-name" name="last_name" placeholder="Chen" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email address</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="sarah@hospital.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone (optional)</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="specialty">Medical specialty</label>
+            <select class="form-select" id="specialty" name="specialty">
+              <option value="">Select specialty...</option>
+              <option>Internal Medicine</option>
+              <option>Surgery</option>
+              <option>Pediatrics</option>
+              <option>Emergency Medicine</option>
+              <option>Family Medicine</option>
+              <option>Radiology</option>
+              <option>Anesthesiology</option>
+              <option>Psychiatry</option>
+              <option>OB/GYN</option>
+              <option>Neurology</option>
+              <option>Cardiology</option>
+              <option>Oncology</option>
+              <option>Resident / Fellow</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="timeline">When are you moving?</label>
+            <select class="form-select" id="timeline" name="timeline">
+              <option value="">Select timeline...</option>
+              <option>Within 3 months</option>
+              <option>3 – 6 months</option>
+              <option>6 – 12 months</option>
+              <option>Just exploring</option>
+            </select>
+          </div>
+          <button class="form-submit" type="submit">Send me the guide &rarr;</button>
+          <div class="form-privacy">Your information is never shared. No spam — ever.</div>
+        </form>
+      </div>
+
+      <!-- THANK YOU STATE -->
+      <div class="thankyou" id="thankyou-view">
+        <div class="thankyou-icon">📬</div>
+        <div class="thankyou-title">Guide on its way!</div>
+        <div class="thankyou-body">Thank you, <span id="ty-name"></span>. I'll send the guide to your inbox shortly.<br><br>In the meantime, feel free to call or text me directly at <a href="tel:2162882096" style="color:var(--terra)">(216) 288-2096</a> — I'm happy to answer any questions about the area.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- WHAT'S INSIDE -->
+<section class="inside-section">
+  <div class="inside-inner">
+    <div class="section-label">What you'll receive</div>
+    <h2 class="section-title">Everything in one place.<br>Nothing you don't need.</h2>
+    <div class="inside-grid">
+      <div class="inside-card">
+        <div class="inside-num">01</div>
+        <div class="inside-title">Neighborhood guide</div>
+        <div class="inside-desc">Granite Bay, Rocklin, Roseville, and Lincoln — compared side by side on price, schools, commute, and lifestyle so you can decide where to focus before you even visit.</div>
+      </div>
+      <div class="inside-card">
+        <div class="inside-num">02</div>
+        <div class="inside-title">90-day relocation checklist</div>
+        <div class="inside-desc">A printable week-by-week checklist built specifically for physicians — covering credentialing timelines, lender pre-approval, home search, and closing milestones.</div>
+      </div>
+      <div class="inside-card">
+        <div class="inside-num">03</div>
+        <div class="inside-title">Physician loan programs</div>
+        <div class="inside-desc">A plain-English breakdown of 0% down physician mortgages, how student loan debt is handled, and which local lenders I trust to work with physician clients.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-strip">
+  <div class="about-inner">
+    <img class="about-photo" src="sunit-brar.jpg" alt="Sunit Brar — Placer County Realtor">
+    <div>
+      <div class="about-eyebrow">Who wrote this guide</div>
+      <h2 class="about-title">Written by someone<br>who lived it.</h2>
+      <p class="about-body">I moved from Ohio to Placer County. My husband is a physician. I know exactly what the relocation process feels like from both sides — as the spouse managing the move and as the agent helping families land in the right home.<br><br>Since 2020 I have closed over $8.5 million in residential sales including a $2.24 million sale in Granite Bay, and two commercial leases in Rocklin. I work with first-time buyers, luxury clients, and physicians at every stage of their career.</p>
+      <div class="about-tags">
+        <span class="about-tag">Licensed since Oct 2020</span>
+        <span class="about-tag">Stone Real Estate</span>
+        <span class="about-tag">DRE# 02125592</span>
+        <span class="about-tag">Rocklin local</span>
+        <span class="about-tag">Physician spouse</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-section">
+  <div class="testimonial-inner">
+    <div class="testimonial-quote">"Sunit understood our timeline from day one. We were closing on a home in Rocklin before I even started my first week."</div>
+    <div class="testimonial-source"><strong>Physician client</strong> &mdash; Relocated to Rocklin, CA &middot; $825,000 purchase</div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<div class="bottom-cta">
+  <h2>Have questions before you download?</h2>
+  <p>Call or text me directly — no obligation, no sales pitch.</p>
+  <div class="cta-btns">
+    <a href="tel:2162882096" class="btn-cream">Call (216) 288-2096</a>
+    <a href="mailto:sunitrealtor@gmail.com" class="btn-outline">Send an email</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">Sunit Brar · Stone Real Estate</div>
+    <div class="footer-info">DRE# 02125592 · 3500 Douglas Blvd, Roseville CA 95661</div>
+  </div>
+  <div class="footer-contact">
+    <a href="tel:2162882096">(216) 288-2096</a> &middot;
+    <a href="mailto:sunitrealtor@gmail.com">sunitrealtor@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+  // Form interaction — shows thank you state on submit
+  // Replace form action with Formspree endpoint when ready
+  document.getElementById('lead-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const firstName = document.getElementById('first-name').value;
+    document.getElementById('ty-name').textContent = firstName;
+    document.getElementById('form-view').style.display = 'none';
+    document.getElementById('thankyou-view').style.display = 'block';
+    // When Formspree is connected, remove e.preventDefault() and let the form submit naturally
+  });
+</script>
+
+</body>
+</html>
