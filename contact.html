@@ -208,7 +208,7 @@
         <div class="form-card-title">Get in touch</div>
         <div class="form-card-sub">I'll respond within 24 hours.</div>
         <!-- Wire up action to Formspree endpoint when ready -->
-        <form id="contact-form" action="#" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/xjgldyle" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="first-name">First name</label>
@@ -325,7 +325,7 @@
 
 <script>
   document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+    
     const firstName = document.getElementById('first-name').value;
     document.getElementById('ty-name').textContent = firstName;
     document.getElementById('form-view').style.display = 'none';
