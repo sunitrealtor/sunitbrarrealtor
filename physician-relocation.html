@@ -203,7 +203,7 @@
         <div class="form-card-title">Get your free guide</div>
         <div class="form-card-sub">Enter your details below and I'll send it directly to your inbox.</div>
         <!-- ACTION to be replaced with Formspree endpoint later -->
-        <form id="lead-form" action="#" method="POST">
+        <form id="lead-form" action="https://formspree.io/f/xpqbepnz" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="first-name">First name</label>
@@ -346,7 +346,7 @@
   // Form interaction — shows thank you state on submit
   // Replace form action with Formspree endpoint when ready
   document.getElementById('lead-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+    
     const firstName = document.getElementById('first-name').value;
     document.getElementById('ty-name').textContent = firstName;
     document.getElementById('form-view').style.display = 'none';
