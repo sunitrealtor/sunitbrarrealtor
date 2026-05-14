@@ -220,7 +220,7 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="phone">Phone (optional)</label>
-            <input class="form-input" type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required pattern="[0-9\s\-\+\(\)]{7,15}">
           </div>
           <div class="form-group">
             <label class="form-label" for="specialty">Medical specialty</label>
@@ -251,6 +251,10 @@
               <option>6 – 12 months</option>
               <option>Just exploring</option>
             </select>
+          </div>
+          <div class="form-group" style="display:flex;align-items:flex-start;gap:12px;background:#f9f5f0;border:1px solid var(--stone);border-radius:6px;padding:14px 16px;">
+            <input type="checkbox" id="confirm" name="confirm" required style="margin-top:3px;accent-color:var(--terra);width:16px;height:16px;flex-shrink:0;cursor:pointer;">
+            <label for="confirm" style="font-size:13px;color:var(--muted);font-weight:300;line-height:1.6;cursor:pointer;">I confirm my contact information is accurate and I consent to receiving the physician relocation guide and being contacted by Sunit Brar Realtor.</label>
           </div>
           <button class="form-submit" type="submit">Send me the guide &rarr;</button>
           <div class="form-privacy">Your information is never shared. No spam — ever.</div>
