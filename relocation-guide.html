@@ -217,7 +217,7 @@
       <div id="form-view">
         <div class="form-card-title">Get your free guide</div>
         <div class="form-card-sub">Tell me a little about your move and I'll send it straight to your inbox.</div>
-        <form id="lead-form" action="#" method="POST">
+        <form id="lead-form" action="https://formspree.io/f/xvzlnkyz" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="first-name">First name</label>
@@ -627,7 +627,7 @@
 
 <script>
   document.getElementById('lead-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+    
     const firstName = document.getElementById('first-name').value;
     document.getElementById('ty-name').textContent = firstName;
     document.getElementById('form-view').style.display = 'none';
