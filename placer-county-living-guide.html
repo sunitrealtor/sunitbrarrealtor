@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The complete Placer County living guide — schools, hospitals, parks, places of worship, restaurants, farmers markets, utilities, and everything you need to know before you move to Placer County CA.">
+<title>The Complete Placer County Living Guide 2026 | Sunit Brar Realtor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --deep:#3D2314; --terra:#8B4A2B; --sienna:#C4956A; --cream:#F5EDE4; --stone:#DDD0C4; --ink:#1c1a18; --muted:#7a6a5e; --white:#ffffff; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; color: var(--ink); background: var(--white); font-size: 16px; line-height: 1.7; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  nav { background: var(--deep); display: flex; justify-content: space-between; align-items: center; padding: 0 5%; height: 68px; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--cream); }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { font-size: 12px; color: rgba(245,237,228,0.65); letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--sienna); }
+  .nav-cta { background: var(--sienna); color: var(--deep) !important; font-weight: 500 !important; padding: 9px 20px; border-radius: 4px; }
+
+  /* HERO */
+  .hero { background: var(--deep); padding: 80px 5% 64px; text-align: center; }
+  .hero-inner { max-width: 860px; margin: 0 auto; }
+  .hero-tag { display: inline-block; background: rgba(196,149,106,0.2); color: var(--sienna); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 14px; border-radius: 3px; margin-bottom: 20px; font-weight: 500; }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5.5vw, 66px); font-weight: 700; line-height: 1.08; margin-bottom: 20px; color: var(--cream); }
+  .hero-sub { font-size: 17px; color: rgba(245,237,228,0.6); font-weight: 300; line-height: 1.75; margin: 0 auto 40px; max-width: 660px; }
+  .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; }
+  .stat { background: rgba(255,255,255,0.04); padding: 20px; text-align: center; }
+  .stat-n { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 700; color: var(--sienna); line-height: 1; }
+  .stat-l { font-size: 11px; color: rgba(245,237,228,0.45); margin-top: 5px; font-weight: 300; }
+
+  /* JUMP NAV */
+  .jump { background: var(--terra); padding: 0 5%; overflow-x: auto; display: flex; }
+  .jump-inner { display: flex; gap: 0; white-space: nowrap; }
+  .jl { display: block; padding: 14px 18px; font-size: 12px; color: rgba(245,237,228,0.8); letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 2px solid transparent; transition: all 0.2s; }
+  .jl:hover { color: var(--cream); border-bottom-color: var(--cream); }
+
+  /* SECTION */
+  .sec { padding: 68px 5%; }
+  .sec-alt { background: var(--cream); }
+  .sec-dark { background: var(--deep); }
+  .inner { max-width: 1100px; margin: 0 auto; }
+  .sec-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 8px; font-weight: 500; }
+  .sec-label-light { color: var(--sienna); }
+  .sec-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3.5vw, 40px); font-weight: 700; color: var(--deep); line-height: 1.15; margin-bottom: 12px; }
+  .sec-title-light { color: var(--cream); }
+  .sec-body { font-size: 15px; color: var(--muted); line-height: 1.85; font-weight: 300; margin-bottom: 28px; max-width: 760px; }
+
+  /* GRIDS */
+  .g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .g4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .g2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  /* CARDS */
+  .card { background: var(--white); border: 1px solid var(--stone); border-radius: 8px; padding: 20px; }
+  .card-alt { background: var(--cream); border: 1px solid var(--stone); border-radius: 8px; padding: 20px; }
+  .clabel { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terra); font-weight: 500; margin-bottom: 6px; }
+  .cname { font-size: 15px; font-weight: 500; color: var(--deep); margin-bottom: 6px; line-height: 1.3; }
+  .cdetail { font-size: 12px; color: var(--muted); line-height: 1.65; font-weight: 300; }
+  .clink { font-size: 12px; color: var(--terra); font-weight: 500; margin-top: 8px; display: block; }
+  .cicon { font-size: 24px; margin-bottom: 10px; }
+
+  /* DISTRICT */
+  .dc { border: 1px solid var(--stone); border-radius: 10px; overflow: hidden; }
+  .dc-head { background: var(--deep); padding: 15px 20px; }
+  .dc-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: var(--cream); margin-bottom: 3px; }
+  .dc-sub { font-size: 11px; color: rgba(245,237,228,0.45); font-weight: 300; }
+  .dc-body { padding: 15px 20px; background: var(--white); }
+  .dc-stats { display: flex; gap: 8px; margin-bottom: 10px; }
+  .ds { flex: 1; background: var(--cream); border-radius: 5px; padding: 8px 4px; text-align: center; }
+  .ds-n { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 700; color: var(--terra); line-height: 1; }
+  .ds-l { font-size: 10px; color: var(--muted); margin-top: 2px; font-weight: 300; }
+  .dc-desc { font-size: 12px; color: var(--muted); line-height: 1.6; font-weight: 300; }
+
+  /* TABLE */
+  .tbl { width: 100%; border-collapse: collapse; }
+  .tbl th { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terra); font-weight: 500; padding: 10px 10px; border-bottom: 2px solid var(--stone); text-align: left; }
+  .tbl td { font-size: 13px; color: var(--ink); padding: 11px 10px; border-bottom: 1px solid var(--stone); font-weight: 300; vertical-align: top; }
+  .tbl td:first-child { font-weight: 500; color: var(--deep); }
+  .tbl tr:last-child td { border-bottom: none; }
+  .tbl tr:hover td { background: rgba(221,208,196,0.2); }
+
+  /* COMMUNITY ROW */
+  .cr { border: 1px solid var(--stone); border-radius: 10px; overflow: hidden; margin-bottom: 14px; }
+  .cr-head { background: var(--deep); padding: 13px 18px; display: flex; align-items: center; gap: 12px; }
+  .cr-flag { font-size: 26px; }
+  .cr-name { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 700; color: var(--cream); }
+  .cr-tag { font-size: 11px; color: rgba(245,237,228,0.4); font-weight: 300; }
+  .cr-body { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: var(--white); }
+  .cc { padding: 13px 15px; border-right: 1px solid var(--stone); }
+  .cc:last-child { border-right: none; }
+  .cc-type { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terra); font-weight: 500; margin-bottom: 4px; }
+  .cc-name { font-size: 13px; font-weight: 500; color: var(--deep); margin-bottom: 3px; line-height: 1.3; }
+  .cc-detail { font-size: 11px; color: var(--muted); line-height: 1.5; font-weight: 300; }
+
+  /* CHECKLIST */
+  .ck-card { border: 1px solid var(--stone); border-radius: 10px; overflow: hidden; }
+  .ck-head { background: var(--terra); padding: 12px 18px; display: flex; align-items: center; gap: 10px; }
+  .ck-icon { font-size: 18px; }
+  .ck-title { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: var(--cream); }
+  .ck-body { padding: 12px 16px; background: var(--white); }
+  .ck-item { display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; border-bottom: 1px solid var(--stone); font-size: 13px; color: var(--muted); line-height: 1.5; font-weight: 300; }
+  .ck-item:last-child { border-bottom: none; }
+  .ck-item strong { color: var(--deep); font-weight: 500; display: block; }
+  .cb { width: 16px; height: 16px; border: 2px solid var(--stone); border-radius: 3px; flex-shrink: 0; margin-top: 2px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+  .cb.done { background: var(--terra); border-color: var(--terra); }
+  .cb.done::after { content: '✓'; color: white; font-size: 10px; font-weight: 700; }
+
+  /* SURROUNDING */
+  .surround-card { border: 1px solid var(--stone); border-radius: 8px; padding: 20px; background: var(--white); display: block; }
+  .surround-card:hover { border-color: var(--sienna); }
+  .surround-tag { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 6px; }
+  .surround-name { font-size: 17px; font-weight: 600; color: var(--deep); margin-bottom: 8px; font-family: 'Cormorant Garamond', serif; }
+  .surround-detail { font-size: 12px; color: var(--muted); line-height: 1.65; font-weight: 300; margin-bottom: 10px; }
+  .surround-price { font-size: 13px; font-weight: 500; color: var(--terra); }
+
+  /* SUNIT */
+  .sunit-wrap { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 200px 1fr; gap: 48px; align-items: center; }
+  .sunit-photo { width: 100%; border-radius: 8px; object-fit: cover; aspect-ratio: 1; }
+  .sunit-eyebrow { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sienna); margin-bottom: 10px; font-weight: 500; }
+  .sunit-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 2.5vw, 32px); font-weight: 700; color: var(--cream); line-height: 1.2; margin-bottom: 14px; }
+  .sunit-body { font-size: 14px; color: rgba(245,237,228,0.65); line-height: 1.8; font-weight: 300; margin-bottom: 20px; }
+  .sunit-btn { display: inline-block; background: var(--sienna); color: var(--deep); padding: 12px 24px; border-radius: 4px; font-size: 13px; font-weight: 500; }
+
+  /* CTA */
+  .cta { background: var(--terra); padding: 64px 5%; text-align: center; }
+  .cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--cream); margin-bottom: 12px; }
+  .cta p { font-size: 16px; color: rgba(245,237,228,0.75); margin-bottom: 32px; font-weight: 300; }
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-cream { background: var(--cream); color: var(--deep); padding: 14px 28px; border-radius: 4px; font-size: 14px; font-weight: 500; }
+  .btn-out { border: 1px solid rgba(245,237,228,0.4); color: var(--cream); padding: 14px 28px; border-radius: 4px; font-size: 14px; font-weight: 300; }
+
+  footer { background: var(--deep); padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid rgba(245,237,228,0.08); }
+  .fl { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--cream); font-weight: 600; }
+  .fi { font-size: 12px; color: rgba(245,237,228,0.4); margin-top: 4px; font-weight: 300; }
+  .fc { font-size: 13px; color: rgba(245,237,228,0.6); line-height: 1.9; text-align: right; }
+  .fc a { color: var(--sienna); }
+
+  @media (max-width: 960px) {
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .g4 { grid-template-columns: repeat(2, 1fr); }
+    .g3 { grid-template-columns: 1fr; }
+    .g2 { grid-template-columns: 1fr; }
+    .cr-body { grid-template-columns: repeat(2, 1fr); }
+    .cc { border-bottom: 1px solid var(--stone); }
+    .sunit-wrap { grid-template-columns: 1fr; }
+    .sunit-photo { max-width: 180px; }
+    nav ul { display: none; }
+    footer { flex-direction: column; text-align: center; }
+    .fc { text-align: center; }
+  }
+  @media (max-width: 560px) {
+    .g4 { grid-template-columns: 1fr; }
+    .cr-body { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Sunit Brar</a>
+  <ul class="nav-links">
+    <li><a href="index.html#buy">Buy</a></li>
+    <li><a href="relocation-guide.html">Relocate</a></li>
+    <li><a href="physician-relocation.html">Physicians</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">The Definitive Local Guide</span>
+    <h1 class="hero-title">The Complete Placer County Living Guide</h1>
+    <p class="hero-sub">Everything in one place — schools, hospitals, parks, places of worship, restaurants, shopping, utilities, and getting settled. 100% focused on Placer County, with a brief look at surrounding areas at the very end.</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-n">269</div><div class="stat-l">Sunny days per year</div></div>
+      <div class="stat"><div class="stat-n">#1</div><div class="stat-l">CA relocation destination</div></div>
+      <div class="stat"><div class="stat-n">2 hrs</div><div class="stat-l">To Lake Tahoe</div></div>
+      <div class="stat"><div class="stat-n">5</div><div class="stat-l">Top-rated school districts</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- JUMP NAV -->
+<div class="jump">
+  <div class="jump-inner">
+    <a href="#neighborhoods" class="jl">Neighborhoods</a>
+    <a href="#schools" class="jl">Schools</a>
+    <a href="#hospitals" class="jl">Hospitals</a>
+    <a href="#outdoors" class="jl">Parks &amp; Outdoors</a>
+    <a href="#worship" class="jl">Worship &amp; Community</a>
+    <a href="#food" class="jl">Food &amp; Shopping</a>
+    <a href="#utilities" class="jl">Utilities</a>
+    <a href="#settled" class="jl">Getting Settled</a>
+    <a href="#checklist" class="jl">Checklist</a>
+    <a href="#surrounding" class="jl">Surrounding Areas</a>
+  </div>
+</div>
+
+<!-- NEIGHBORHOODS -->
+<div class="sec" id="neighborhoods">
+  <div class="inner">
+    <div class="sec-label">Where to live</div>
+    <h2 class="sec-title">Placer County neighborhoods</h2>
+    <p class="sec-body">Five distinct communities within Placer County — each with its own character, price range, and lifestyle. The right neighborhood depends on your priorities: commute, schools, budget, and how you want to spend your weekends.</p>
+    <div class="g3">
+      <a href="neighborhoods/loomis.html" class="card" style="display:block;">
+        <div class="clabel">Sunit's home · Hidden gem</div>
+        <div class="cname">Loomis</div>
+        <div class="cdetail">Quiet country charm with oak trees, larger lots, and a tight-knit community feel. Loomis Union School District is one of the best K–8 districts in California. Limited inventory — properties move fast when they come up.</div>
+        <div class="clink">$700K – $1.1M &rarr;</div>
+      </a>
+      <a href="neighborhoods/granite-bay.html" class="card" style="display:block;">
+        <div class="clabel">Most prestigious</div>
+        <div class="cname">Granite Bay</div>
+        <div class="cdetail">Folsom Lake access, Eureka Union schools (top 5% in California), very low crime, and some of the finest homes in Northern California. The prestige address of Placer County.</div>
+        <div class="clink">$900K – $3M+ &rarr;</div>
+      </a>
+      <a href="neighborhoods/rocklin.html" class="card" style="display:block;">
+        <div class="clabel">Best value · Where Sunit works</div>
+        <div class="cname">Rocklin</div>
+        <div class="cdetail">Rolling hills, Sierra views, award-winning Rocklin Unified schools, and a strong community feel. Quarry Park Adventures is right downtown. Active South Asian community presence.</div>
+        <div class="clink">$550K – $850K &rarr;</div>
+      </a>
+      <a href="neighborhoods/roseville.html" class="card" style="display:block;">
+        <div class="clabel">Largest city · Most walkable</div>
+        <div class="cname">Roseville</div>
+        <div class="cdetail">Placer County's largest city with the most variety in price points and neighborhoods. Sutter Roseville Medical Center and tech employers HP and Oracle are headquartered here.</div>
+        <div class="clink">$550K – $800K &rarr;</div>
+      </a>
+      <a href="neighborhoods/lincoln.html" class="card" style="display:block;">
+        <div class="clabel">Fastest growing · Best land value</div>
+        <div class="cname">Lincoln</div>
+        <div class="cdetail">Most land per dollar in Placer County. New construction options with builder incentives, Sun City Lincoln Hills for extended family, and a genuine small-town community feel.</div>
+        <div class="clink">$500K – $750K &rarr;</div>
+      </a>
+      <div class="card" style="background:var(--cream);">
+        <div class="clabel">Also in Placer County</div>
+        <div class="cname">Auburn &amp; Foothill Communities</div>
+        <div class="cdetail">Auburn is the county seat with a charming historic Old Town, excellent outdoor access to Lake Clementine, and a quieter foothill lifestyle at lower price points. Colfax and Penryn are additional foothill options.</div>
+        <div class="clink" style="color:var(--muted);">Foothill communities · $450K–$700K</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCHOOLS -->
+<div class="sec sec-alt" id="schools">
+  <div class="inner">
+    <div class="sec-label">Education</div>
+    <h2 class="sec-title">Top schools in Placer County</h2>
+    <p class="sec-body">School district boundaries affect property values significantly in Placer County. Before making an offer, always verify the specific school serving that address — not just the district rating. Tell me the address and I will look it up for you instantly.</p>
+
+    <div class="g2" style="margin-bottom:24px;">
+      <div class="dc">
+        <div class="dc-head"><div class="dc-name">Eureka Union School District</div><div class="dc-sub">Granite Bay &amp; parts of Roseville · K–8 · eurekausd.org</div></div>
+        <div class="dc-body">
+          <div class="dc-stats"><div class="ds"><div class="ds-n">Top 5%</div><div class="ds-l">CA ranking</div></div><div class="ds"><div class="ds-n">21:1</div><div class="ds-l">Student-teacher</div></div></div>
+          <p class="dc-desc">Consistently one of the top K–8 districts in all of California. Exceptional outcomes and strong parent involvement. Feeds into Granite Bay High School.</p>
+        </div>
+      </div>
+      <div class="dc">
+        <div class="dc-head"><div class="dc-name">Rocklin Unified School District</div><div class="dc-sub">Rocklin · K–12 · rocklinusd.org</div></div>
+        <div class="dc-body">
+          <div class="dc-stats"><div class="ds"><div class="ds-n">Top 10%</div><div class="ds-l">CA ranking</div></div><div class="ds"><div class="ds-n">21:1</div><div class="ds-l">Student-teacher</div></div></div>
+          <p class="dc-desc">Award-winning K–12 district. Whitney High (SAT avg 1240), Rocklin High (SAT avg 1290). Strong arts, athletics, and AP programs throughout.</p>
+        </div>
+      </div>
+      <div class="dc">
+        <div class="dc-head"><div class="dc-name">Loomis Union School District</div><div class="dc-sub">Loomis · K–8 · loomis.k12.ca.us</div></div>
+        <div class="dc-body">
+          <div class="dc-stats"><div class="ds"><div class="ds-n">Top 10%</div><div class="ds-l">CA ranking</div></div><div class="ds"><div class="ds-n">20:1</div><div class="ds-l">Student-teacher</div></div></div>
+          <p class="dc-desc">H. Clarke Powers Elementary is one of the best in the region. Tight-knit community culture and outstanding parent involvement. Feeds into Del Oro High School.</p>
+        </div>
+      </div>
+      <div class="dc">
+        <div class="dc-head"><div class="dc-name">Roseville City &amp; Joint Union HSD</div><div class="dc-sub">Roseville · K–12 · rcsdk8.org / rjuhsd.us</div></div>
+        <div class="dc-body">
+          <div class="dc-stats"><div class="ds"><div class="ds-n">Top 15%</div><div class="ds-l">CA ranking</div></div><div class="ds"><div class="ds-n">95%</div><div class="ds-l">Grad rate</div></div></div>
+          <p class="dc-desc">Junction Elementary and Diamond Creek Elementary are K–8 standouts. Woodcreek High (SAT avg 1220) leads the high school district with strong college placement rates.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--deep);margin-bottom:14px;">Top public high schools in Placer County</h3>
+    <table class="tbl" style="margin-bottom:28px;">
+      <thead><tr><th>School</th><th>City</th><th>Students</th><th>Grad rate</th><th>Avg SAT</th><th>Phone</th></tr></thead>
+      <tbody>
+        <tr><td>Granite Bay High School</td><td>Granite Bay</td><td>2,050</td><td>96%</td><td>1,310</td><td>(916) 786-8676</td></tr>
+        <tr><td>Rocklin High School</td><td>Rocklin</td><td>2,210</td><td>97%</td><td>1,290</td><td>(916) 632-1600</td></tr>
+        <tr><td>Whitney High School</td><td>Rocklin</td><td>2,040</td><td>96%</td><td>1,240</td><td>(916) 632-6500</td></tr>
+        <tr><td>Del Oro High School</td><td>Loomis</td><td>1,657</td><td>96%</td><td>1,240</td><td>(916) 652-2944</td></tr>
+        <tr><td>Woodcreek High School</td><td>Roseville</td><td>2,044</td><td>95%</td><td>1,220</td><td>(916) 771-6565</td></tr>
+        <tr><td>Western Sierra Collegiate Academy</td><td>Rocklin</td><td>770</td><td>99%</td><td>1,260</td><td>(916) 778-4544</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--deep);margin-bottom:14px;">Top elementary schools in Placer County</h3>
+    <table class="tbl" style="margin-bottom:24px;">
+      <thead><tr><th>School</th><th>City</th><th>District</th><th>Grades</th><th>Phone</th></tr></thead>
+      <tbody>
+        <tr><td>H. Clarke Powers Elementary</td><td>Loomis</td><td>Loomis Union</td><td>K–8</td><td>(916) 652-2635</td></tr>
+        <tr><td>Greenhills Elementary</td><td>Granite Bay</td><td>Eureka Union</td><td>K–5</td><td>(916) 791-4230</td></tr>
+        <tr><td>Oakhills Elementary</td><td>Granite Bay</td><td>Eureka Union</td><td>K–5</td><td>(916) 791-5391</td></tr>
+        <tr><td>Valley View Elementary</td><td>Rocklin</td><td>Rocklin Unified</td><td>K–5</td><td>(916) 435-4844</td></tr>
+        <tr><td>Sierra Elementary</td><td>Rocklin</td><td>Rocklin Unified</td><td>K–5</td><td>(916) 788-7141</td></tr>
+        <tr><td>Junction Elementary</td><td>Roseville</td><td>Roseville City</td><td>K–8</td><td>(916) 771-1860</td></tr>
+        <tr><td>Diamond Creek Elementary</td><td>Roseville</td><td>Roseville City</td><td>K–8</td><td>(916) 771-1760</td></tr>
+        <tr><td>Franklin Elementary</td><td>Loomis</td><td>Loomis Union</td><td>K–8</td><td>(916) 652-1818</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--muted);font-weight:300;">Full schools guide: <a href="placer-county-schools-guide.html" style="color:var(--terra);font-weight:500;">placer-county-schools-guide.html</a></p>
+  </div>
+</div>
+
+<!-- HOSPITALS -->
+<div class="sec" id="hospitals">
+  <div class="inner">
+    <div class="sec-label">Healthcare</div>
+    <h2 class="sec-title">Hospitals in &amp; near Placer County</h2>
+    <p class="sec-body">Placer County has two major hospitals within the county itself — Sutter Roseville Medical Center and Kaiser Permanente Roseville — plus convenient access to UC Davis and Sacramento's full medical infrastructure. Key commute times for physician families below.</p>
+    <table class="tbl" style="margin-bottom:16px;">
+      <thead><tr><th>Hospital</th><th>Address</th><th>From Rocklin</th><th>From Roseville</th><th>From Granite Bay</th></tr></thead>
+      <tbody>
+        <tr><td>Sutter Roseville Medical Center</td><td>1 Medical Plaza Dr, Roseville 95661</td><td>10–15 min</td><td>5–10 min</td><td>15–25 min</td></tr>
+        <tr><td>Kaiser Permanente Roseville</td><td>1600 Eureka Rd, Roseville 95661</td><td>10–20 min</td><td>5–15 min</td><td>20–30 min</td></tr>
+        <tr><td>Adventist Health Placer Hills</td><td>900 Twelve Bridges Dr, Lincoln 95648</td><td>20–25 min</td><td>15–20 min</td><td>30–35 min</td></tr>
+        <tr><td>Sutter Auburn Faith Hospital</td><td>11815 Education St, Auburn 95602</td><td>25–30 min</td><td>30–35 min</td><td>30–35 min</td></tr>
+        <tr><td>UC Davis Medical Center</td><td>2315 Stockton Blvd, Sacramento 95817</td><td>30–40 min</td><td>35–45 min</td><td>35–45 min</td></tr>
+        <tr><td>Sutter Medical Center Sacramento</td><td>2801 L St, Sacramento 95816</td><td>35–45 min</td><td>35–45 min</td><td>40–50 min</td></tr>
+        <tr><td>Kaiser Permanente Sacramento</td><td>2025 Morse Ave, Sacramento 95825</td><td>35–45 min</td><td>35–50 min</td><td>40–50 min</td></tr>
+        <tr><td>Mercy San Juan Medical Center</td><td>6501 Coyle Ave, Carmichael 95608</td><td>30–40 min</td><td>30–40 min</td><td>35–45 min</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--muted);font-weight:300;">Physician relocating? <a href="physician-relocation.html" style="color:var(--terra);font-weight:500;">See the Physician Relocation Guide &rarr;</a></p>
+  </div>
+</div>
+
+<!-- PARKS & OUTDOORS -->
+<div class="sec sec-alt" id="outdoors">
+  <div class="inner">
+    <div class="sec-label">Parks &amp; outdoor life</div>
+    <h2 class="sec-title">269 sunny days. Endless things to do.</h2>
+    <p class="sec-body">One of the most compelling reasons families stay in Placer County for decades is the outdoor life. Folsom Lake is at your doorstep. Lake Tahoe is two hours away. And the trails, parks, and recreation options within the county itself are genuinely exceptional.</p>
+
+    <div class="g4" style="margin-bottom:28px;">
+      <div class="card">
+        <div class="cicon">🏖️</div>
+        <div class="clabel">State Recreation Area</div>
+        <div class="cname">Folsom Lake</div>
+        <div class="cdetail">Folsom Lake Rd, Granite Bay / Folsom · (916) 988-0205 · 75 miles of trails. Boating, swimming, fishing, hiking, horseback riding. Granite Bay Beach is the closest access point for most Placer County residents. Open year-round.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🎢</div>
+        <div class="clabel">Adventure Park · Rocklin</div>
+        <div class="cname">Quarry Park Adventures</div>
+        <div class="cdetail">5373 Pacific St, Rocklin · (916) 824-1680 · quarrypark.com · Zip lines, free-fall jumps, rock climbing, paddle boats in a 160-year-old historic granite quarry. Downtown Rocklin's signature attraction.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🚴</div>
+        <div class="clabel">Placer County Trails</div>
+        <div class="cname">American River Parkway</div>
+        <div class="cdetail">Runs from Sacramento through Placer County to Folsom Lake · 32 continuous miles of paved and unpaved trail. One of the finest urban trail systems in the country. Accessible from multiple points in Placer County.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">⛷️</div>
+        <div class="clabel">2 Hours Away · I-80 East</div>
+        <div class="cname">Lake Tahoe</div>
+        <div class="cdetail">Palisades Tahoe, Northstar, Sierra-at-Tahoe for skiing. Crystal clear beaches and hiking in summer. Placer County families make this drive for day trips regularly — not just annual vacations.</div>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--deep);margin-bottom:14px;">City &amp; regional parks in Placer County</h3>
+    <div class="g3" style="margin-bottom:28px;">
+      <div class="card-alt">
+        <div class="cname">Mahany Regional Park — Roseville</div>
+        <div class="cdetail">1545 Pleasant Grove Blvd, Roseville · Baseball, cycling, football, multi-use sports. One of the largest regional parks in Placer County with extensive facilities.</div>
+      </div>
+      <div class="card-alt">
+        <div class="cname">Johnson-Springview Park — Rocklin</div>
+        <div class="cdetail">5480 5th St, Rocklin · 46-acre park with tennis, basketball, volleyball, playgrounds, and the Rruff Off Leash Dog Park adjacent. A community hub in central Rocklin.</div>
+      </div>
+      <div class="card-alt">
+        <div class="cname">Maidu Regional Park — Roseville</div>
+        <div class="cdetail">1550 Maidu Dr, Roseville · 50+ acres including the Maidu Museum &amp; Historic Site, sports fields, amphitheater, and extensive picnic areas.</div>
+      </div>
+      <div class="card-alt">
+        <div class="cname">Miners Ravine Trail — Roseville</div>
+        <div class="cdetail">Roseville · Popular multi-use trail system through creekside habitat. Connects multiple neighborhoods and parks throughout western Roseville. Great for walking, running, and biking.</div>
+      </div>
+      <div class="card-alt">
+        <div class="cname">Twelve Bridges Regional Park — Lincoln</div>
+        <div class="cdetail">Lincoln · Large community park serving Lincoln's growing population with sports facilities, open green space, and community gathering areas.</div>
+      </div>
+      <div class="card-alt">
+        <div class="cname">Lake Clementine — Auburn</div>
+        <div class="cdetail">Auburn State Recreation Area · Emerald green lake in the Sierra foothills. Kayaking, swimming, hiking. Far less crowded than Folsom Lake — a genuine local favorite for Placer County residents.</div>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--deep);margin-bottom:14px;">Dog parks in Placer County</h3>
+    <div class="g3" style="margin-bottom:28px;">
+      <div class="card">
+        <div class="cname">Rruff Off Leash Dog Park — Rocklin</div>
+        <div class="cdetail">5480 5th St, Rocklin CA 95677 · rruffhealingheroes.org · Separate large/small dog areas. Special needs section. Agility course. Open 6am–10pm daily.</div>
+      </div>
+      <div class="card">
+        <div class="cname">Saugstad Off Leash Dog Park — Roseville</div>
+        <div class="cdetail">100 Buljan Dr, Roseville CA 95747 · Fully fenced separate areas for large and small dogs. Well-maintained with good parking. Open 6am–7pm daily.</div>
+      </div>
+      <div class="card">
+        <div class="cname">Fido Field — Folsom (nearby)</div>
+        <div class="cdetail">1775 Creekside Dr, Folsom CA 95630 · Off-leash areas for large and small dogs. Shade and owner seating. Open 7am–9pm. Just outside Placer County — very accessible from Granite Bay and Rocklin.</div>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--deep);margin-bottom:14px;">Farmers markets in Placer County</h3>
+    <table class="tbl" style="margin-bottom:28px;">
+      <thead><tr><th>Market</th><th>Location</th><th>Day &amp; Hours</th><th>Season</th></tr></thead>
+      <tbody>
+        <tr><td>Blue Oaks Farmers Market</td><td>6RC Willey Parking Lot, Rocklin</td><td>Sat 8:30am–12:30pm</td><td>June–October</td></tr>
+        <tr><td>Fountains Farmers Market</td><td>1198 Roseville Pkwy, Roseville</td><td>Tue 8am–12pm</td><td>Year-round</td></tr>
+        <tr><td>Sutter Medical Center Market</td><td>11 Medical Plaza Dr, Roseville</td><td>Fri 1pm–4pm</td><td>March onward</td></tr>
+        <tr><td>Lincoln Farmers Market</td><td>Downtown Lincoln, 5th St Plaza</td><td>Sat 8am–12pm</td><td>May–October</td></tr>
+        <tr><td>Loomis Fruit Stand</td><td>Various farm stands, Loomis</td><td>Seasonal</td><td>Summer/Fall</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--deep);margin-bottom:14px;">Youth sports &amp; recreation</h3>
+    <div class="g3">
+      <div class="card-alt"><div class="cname">AYSO Soccer</div><div class="cdetail">ayso.org · Rocklin and Roseville chapters with fall and spring seasons. One of the most active youth sports organizations in Placer County for ages 4–18.</div></div>
+      <div class="card-alt"><div class="cname">Rocklin Little League</div><div class="cdetail">rocklinlittleleague.com · Youth baseball and softball ages 4–16. Active community program with multiple age divisions. Spring season.</div></div>
+      <div class="card-alt"><div class="cname">Placer Swim League</div><div class="cdetail">Community swim teams throughout Rocklin, Roseville, Lincoln, and Granite Bay. Summer league for youth swimmers of all skill levels. Highly competitive and well-run.</div></div>
+      <div class="card-alt"><div class="cname">Maidu Tennis Center — Roseville</div><div class="cdetail">1550 Maidu Dr, Roseville · Multiple courts, lessons, leagues, and clinics for all ages. One of the largest public tennis facilities in Placer County.</div></div>
+      <div class="card-alt"><div class="cname">Rocklin Parks &amp; Recreation</div><div class="cdetail">rocklin.ca.us/parks · Year-round youth programs including gymnastics, martial arts, dance, and flag football through Rocklin's Parks &amp; Recreation Department. One of the most active city recreation programs in Placer County.</div></div>
+      <div class="card-alt"><div class="cname">Quarry Park Adventures</div><div class="cdetail">5373 Pacific St, Rocklin · Corporate team building, birthday parties, youth group adventures. The most unique outdoor activity venue in Placer County.</div></div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-top:16px;font-weight:300;">Full outdoor guide: <a href="placer-county-parks-outdoors.html" style="color:var(--terra);font-weight:500;">Parks &amp; Outdoor Life in Placer County</a></p>
+  </div>
+</div>
+
+<!-- WORSHIP & COMMUNITY -->
+<div class="sec" id="worship">
+  <div class="inner">
+    <div class="sec-label">Places of worship &amp; community</div>
+    <h2 class="sec-title">Every community is welcome in Placer County.</h2>
+    <p class="sec-body">Placer County has active and welcoming faith communities across every tradition. These listings show the most established resource for each community — one per tradition. Once you have chosen your neighborhood, I am happy to personally connect you with community members in your area regardless of background.</p>
+
+    <div class="cr">
+      <div class="cr-head"><div class="cr-flag">🛕</div><div><div class="cr-name">Hindu Community</div><div class="cr-tag">Multiple active temple communities in Placer County and greater Sacramento</div></div></div>
+      <div class="cr-body">
+        <div class="cc"><div class="cc-type">Temple — Roseville area</div><div class="cc-name">Sri Venkateswara Temple (SV Temple)</div><div class="cc-detail">Folsom, CA · (209) 647-9027 · svtemplesacramento.org · Serving all of Placer County · Open 7 days · Daily prayers &amp; major festivals</div></div>
+        <div class="cc"><div class="cc-type">Temple — Sacramento</div><div class="cc-name">Laxmi Narayan Temple</div><div class="cc-detail">7495 Elder Creek Rd, Sacramento · (916) 383-4206 · 25–35 min from Rocklin · Open daily morning &amp; evening services</div></div>
+        <div class="cc"><div class="cc-type">Mandir — Placer County</div><div class="cc-name">BAPS Shri Swaminarayan Mandir</div><div class="cc-detail">10548 Armstrong Ave, Mather · (916) 822-4290 · baps.org · Swaminarayan tradition · Regular satsang &amp; cultural programs</div></div>
+        <div class="cc"><div class="cc-type">Community</div><div class="cc-name">ISKCON Folsom</div><div class="cc-detail">Folsom, CA · Hare Krishna community with Sunday feast and cultural programs. 15–20 min from Rocklin and Granite Bay.</div></div>
+      </div>
+    </div>
+
+    <div class="cr">
+      <div class="cr-head"><div class="cr-flag">🕌</div><div><div class="cr-name">Sikh Community</div><div class="cr-tag">Deep Punjabi roots — one of the oldest Sikh communities in California, right in Placer County</div></div></div>
+      <div class="cr-body">
+        <div class="cc"><div class="cc-type">Gurdwara — Roseville</div><div class="cc-name">Gurdwara Sri Sachkhand Sahib</div><div class="cc-detail">1090 Main St, Roseville CA 95678 · (916) 773-4812 · gurdwararoseville.com · 24-hour langar · Open to all</div></div>
+        <div class="cc"><div class="cc-type">Gurdwara — Roseville</div><div class="cc-name">Gurdwara Sahib Berkley Ave</div><div class="cc-detail">201 Berkley Ave, Roseville CA 95678 · (916) 773-3828 · Active congregation with regular services and community programs</div></div>
+        <div class="cc"><div class="cc-type">Gurdwara — West Sacramento</div><div class="cc-name">Guru Nanak Sat Sangat</div><div class="cc-detail">2301 Evergreen Ave, West Sacramento · (916) 371-5415 · sikhtemple.org · ~30 min from Rocklin</div></div>
+        <div class="cc"><div class="cc-type">Major Regional Event</div><div class="cc-name">Yuba City Nagar Kirtan</div><div class="cc-detail">Annually in November · Yuba City, 30 min north · One of the largest Sikh parades outside India — draws 100,000+ attendees. Placer County families attend every year.</div></div>
+      </div>
+    </div>
+
+    <div class="cr">
+      <div class="cr-head"><div class="cr-flag">☪️</div><div><div class="cr-name">Muslim Community</div><div class="cr-tag">Active mosques serving Placer County and greater Sacramento</div></div></div>
+      <div class="cr-body">
+        <div class="cc"><div class="cc-type">Mosque — Largest in Region</div><div class="cc-name">Masjid Annur Islamic Center</div><div class="cc-detail">6990 65th St, Sacramento · masjidannur.net · Islamic school, community programs, 5 daily prayers · ~35 min from Rocklin</div></div>
+        <div class="cc"><div class="cc-type">Mosque &amp; Community Center</div><div class="cc-name">SALAM Islamic Center</div><div class="cc-detail">salamcenter.org · Multi-ethnic Muslim community · School and social services · ~30 min from Roseville</div></div>
+        <div class="cc"><div class="cc-type">Mosque — North Sacramento</div><div class="cc-name">Islamic Center of North Sacramento</div><div class="cc-detail">iconsacramento.org · Off I-80 at Madison Ave · Convenient for Placer County families · 5 daily prayers</div></div>
+        <div class="cc"><div class="cc-type">Community</div><div class="cc-name">Halal Grocery Resources</div><div class="cc-detail">Multiple halal butchers and markets in Sacramento and along Stockton Blvd corridor. India Supermarket in Roseville also carries halal options.</div></div>
+      </div>
+    </div>
+
+    <div class="cr">
+      <div class="cr-head"><div class="cr-flag">✡️</div><div><div class="cr-name">Jewish Community</div><div class="cr-tag">One of California's oldest Jewish communities — founded during the Gold Rush of 1849</div></div></div>
+      <div class="cr-body">
+        <div class="cc"><div class="cc-type">Synagogue — Reform</div><div class="cc-name">Congregation B'nai Israel</div><div class="cc-detail">3600 Riverside Blvd, Sacramento · cbisacramento.org · Founded 1852 · Oldest Jewish congregation in Sacramento · ~35 min from Rocklin</div></div>
+        <div class="cc"><div class="cc-type">Synagogue — Chabad</div><div class="cc-name">Chabad of Sacramento</div><div class="cc-detail">945 Evelyn Lane, Sacramento · chabad.org · Regular Shabbat dinners, holiday programming, and community events welcoming all levels of observance</div></div>
+        <div class="cc"><div class="cc-type">Community Organization</div><div class="cc-name">Jewish Federation of Sacramento</div><div class="cc-detail">jewishsac.org · Connects Jewish families to community events, resources, and support throughout the Sacramento region</div></div>
+        <div class="cc"><div class="cc-type">Kosher Grocery</div><div class="cc-name">Nugget Markets — Kosher Section</div><div class="cc-detail">Multiple Placer County locations · nuggetmarkets.com · Best kosher selection among any mainstream grocer in the Placer County area</div></div>
+      </div>
+    </div>
+
+    <div class="cr">
+      <div class="cr-head"><div class="cr-flag">🛐</div><div><div class="cr-name">Buddhist Communities</div><div class="cr-tag">Multiple traditions serving Japanese, Vietnamese, Chinese, Thai, and general communities</div></div></div>
+      <div class="cr-body">
+        <div class="cc"><div class="cc-type">Japanese Buddhist</div><div class="cc-name">Buddhist Church of Sacramento</div><div class="cc-detail">2401 Riverside Blvd, Sacramento · Founded 1899 · 2,000+ members · Jodo Shinshu tradition · 2nd largest Buddhist church in America</div></div>
+        <div class="cc"><div class="cc-type">Placer County</div><div class="cc-name">Placer Buddhist Church</div><div class="cc-detail">Placer County · Jodo Shinshu Buddhist Churches of America affiliate · Serving the local Japanese-American community</div></div>
+        <div class="cc"><div class="cc-type">Meditation Center</div><div class="cc-name">Sacramento Dharma Center</div><div class="cc-detail">Sacramento, CA · Open and welcoming meditation groups across multiple Buddhist traditions. Accessible to anyone interested in mindfulness and meditation.</div></div>
+        <div class="cc"><div class="cc-type">Vietnamese Buddhist</div><div class="cc-name">Kim Quang Temple</div><div class="cc-detail">Sacramento, CA · #1 rated Buddhist temple in Sacramento · Active Vietnamese Buddhist community · Regular ceremonies and community gatherings</div></div>
+      </div>
+    </div>
+
+    <div class="cr">
+      <div class="cr-head"><div class="cr-flag">✝️</div><div><div class="cr-name">Major Christian Churches in Placer County</div><div class="cr-tag">Two of the largest and most active churches in the region — plus multicultural congregations</div></div></div>
+      <div class="cr-body">
+        <div class="cc"><div class="cc-type">Megachurch · Rocklin</div><div class="cc-name">Destiny Christian Church</div><div class="cc-detail">6900 Destiny Dr, Rocklin CA 95677 · (916) 780-2273 · destinyrocklin.com · Sunday services 9am, 10am &amp; 11am. Multicultural congregation including Hispanic, Armenian, Farsi &amp; Slavic communities. Founded 1988. Active food drives and community programs. Cafe and community center on same campus.</div></div>
+        <div class="cc"><div class="cc-type">Megachurch · Granite Bay</div><div class="cc-name">Bayside Church — Granite Bay Campus</div><div class="cc-detail">8191 Sierra College Blvd, Roseville CA 95661 · (916) 791-1244 · granitebay.baysideonline.com · Sat 5pm · Sun 8:15am, 9:45am, 11:30am &amp; 7pm · 20,000 weekly attendance across all campuses. One of the largest churches in Northern California. Founded 1995.</div></div>
+        <div class="cc"><div class="cc-type">Korean Catholic</div><div class="cc-name">St. Jeong-Hye Elizabeth Korean Catholic</div><div class="cc-detail">2110 Broadway, Sacramento · (916) 733-0100 · Korean-language services · Active Korean Catholic community serving Placer County and Sacramento · ~35 min from Rocklin</div></div>
+        <div class="cc"><div class="cc-type">South Asian &amp; Multicultural</div><div class="cc-name">Regional Congregations</div><div class="cc-detail">Vietnamese, Filipino, Tamil, Telugu, Malayali, and other South Asian Christian fellowships are active throughout the Sacramento region. Contact me for personal community connections once you have settled.</div></div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-top:16px;font-weight:300;">South Asian community guide: <a href="south-asian-relocation-guide.html" style="color:var(--terra);font-weight:500;">South Asian Relocation Guide</a> &nbsp;·&nbsp; <a href="sacramento-community-guide.html" style="color:var(--terra);font-weight:500;">Sacramento Multicultural Community Guide</a></p>
+  </div>
+</div>
+
+<!-- FOOD & SHOPPING -->
+<div class="sec sec-alt" id="food">
+  <div class="inner">
+    <div class="sec-label">Food &amp; shopping</div>
+    <h2 class="sec-title">Dining, groceries &amp; shopping<br>in Placer County.</h2>
+    <p class="sec-body">Sacramento is the Farm-to-Fork Capital of America — and Placer County benefits fully. Here are the top restaurants by city, every major grocery store, and the best shopping in the county.</p>
+
+    <!-- RESTAURANTS BY CITY -->
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--deep);margin-bottom:6px;">Restaurants — by city</h3>
+    <p style="font-size:13px;color:var(--muted);font-weight:300;margin-bottom:20px;">Top 5 most popular and highly rated restaurants in each Placer County city, based on Yelp, Google, and local reviews.</p>
+
+    <h4 style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:var(--terra);margin-bottom:12px;border-bottom:1px solid var(--stone);padding-bottom:8px;">🍽️ Rocklin</h4>
+    <div class="g3" style="margin-bottom:28px;">
+      <div class="card">
+        <div class="clabel">#1 Lebanese · Nationally Ranked</div>
+        <div class="cname">Wally's Cafe</div>
+        <div class="cdetail">2110 Sunset Blvd #600, Rocklin · Ranked #6 on Yelp's Top 100 Restaurants in America in 2025. Lebanese cuisine — pomegranate chicken, beef shawarma, kabobs. One of the most acclaimed restaurants in all of Placer County. Reservations recommended.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#2 American Breakfast</div>
+        <div class="cname">The Pantry</div>
+        <div class="cdetail">Rocklin, CA · Top-rated breakfast and brunch spot. Known for generous portions, friendly service, and a menu that covers all the classics done right. Consistently packed on weekends — arrive early or expect a wait.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#3 American · Farm-to-Table</div>
+        <div class="cname">The Grazing Goose</div>
+        <div class="cdetail">Rocklin, CA · Beloved local spot known for creative American dishes with local ingredients. Warm atmosphere and attentive service. One of Rocklin's most consistently praised restaurants for both food quality and experience.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#4 Korean Fried Chicken</div>
+        <div class="cname">Dak Good</div>
+        <div class="cdetail">Rocklin, CA · Highly rated Korean fried chicken spot. Excellent lunch specials Mon–Fri 11am–3pm. Known for soy garlic wings and buldak. Clean, modern interior. Fast-growing local favorite among Rocklin residents.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#5 Fine Dining</div>
+        <div class="cname">The Chef's Table</div>
+        <div class="cdetail">Rocklin, CA · Upscale dining with an eclectic menu and rotating specials. Extensive local beer and wine selection. Considered one of Rocklin's best options for a special occasion dinner. Reservations recommended.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Also popular</div>
+        <div class="cname">Highland Noodles · Pera Mezze House · Mezcalito Oaxacan</div>
+        <div class="cdetail">Highland Noodles — top-rated Asian noodle dishes. Pera Mezze House — upscale Turkish and Mediterranean. Mezcalito Oaxacan Cuisine — authentic Mexican with mezcal cocktails. All consistently highly rated in Rocklin.</div>
+      </div>
+    </div>
+
+    <h4 style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:var(--terra);margin-bottom:12px;border-bottom:1px solid var(--stone);padding-bottom:8px;">🍽️ Roseville</h4>
+    <div class="g3" style="margin-bottom:28px;">
+      <div class="card">
+        <div class="clabel">#1 Japanese Sushi · Institution</div>
+        <div class="cname">Mikuni Japanese Restaurant</div>
+        <div class="cdetail">Roseville, CA · mikuni.com · #1 most recommended sushi restaurant in Roseville by virtually every local guide. Creative rolls, excellent sashimi, full Japanese menu. Multiple Sacramento area locations. A regional institution since 1987.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#2 Sandwiches · Nationally Ranked</div>
+        <div class="cname">Guy's For Lunch</div>
+        <div class="cdetail">1249 Pleasant Grove Blvd, Roseville · Ranked #21 on Yelp's Top 100 in America in 2025. Family-owned sandwich shop. Famous for chicken salad, pulled pork, and homemade turkey chili. Small, beloved, and worth a wait.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#3 Fine Dining · Special Occasions</div>
+        <div class="cname">Sienna Restaurant</div>
+        <div class="cdetail">Roseville, CA · Upscale contemporary American. One of Roseville's go-to restaurants for date nights and celebrations. Excellent service, refined menu, and a strong wine list. Consistently top-rated on OpenTable and Yelp.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#4 Steakhouse · Upscale</div>
+        <div class="cname">Fleming's Prime Steakhouse</div>
+        <div class="cdetail">Roseville Galleria area · flemingssteakhouse.com · USDA prime steaks, an award-winning wine list, and exceptional service. One of the best fine dining options in all of Placer County for a special occasion.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#5 Asian · Family Favorite</div>
+        <div class="cname">Fat's Asia Bistro</div>
+        <div class="cdetail">Roseville, CA · fatsrestaurants.com · Chinese and Pan-Asian cuisine in a lively atmosphere. Consistently packed, great for families and groups. Known for lettuce wraps, green beans, and generous portions. A Roseville staple.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Also popular</div>
+        <div class="cname">Pera Mezze House · Yang Kee Dumpling · Monk's Cellar · Nixtaco</div>
+        <div class="cdetail">Pera Mezze — upscale Turkish/Mediterranean. Yang Kee Dumpling — excellent dumplings and noodles. Monk's Cellar — elevated pub food and local craft beer downtown. Nixtaco — popular Mexican with creative street tacos.</div>
+      </div>
+    </div>
+
+    <h4 style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:var(--terra);margin-bottom:12px;border-bottom:1px solid var(--stone);padding-bottom:8px;">🍽️ Granite Bay</h4>
+    <div class="g3" style="margin-bottom:28px;">
+      <div class="card">
+        <div class="clabel">#1 Fine Dining · Farm-to-Table</div>
+        <div class="cname">Hawks Restaurant</div>
+        <div class="cdetail">Granite Bay, CA · hawksrestaurant.com · Placer County's most acclaimed fine dining restaurant. Farm-to-table menu that changes seasonally. Almond wood-grilled meats, local ingredients, exceptional wine list. Featured in Sacramento Magazine's Best Of. Reservations essential.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#2 Italian · Local Favorite</div>
+        <div class="cname">Vaiano's Trattoria</div>
+        <div class="cdetail">Granite Bay, CA · Highly regarded Italian restaurant. Noted for one of the best fish stews (cioppino) in the entire Sacramento region. Neighborhood Italian done with care and quality ingredients. A genuine local treasure in Granite Bay.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#3 Brunch · Weekend Favorite</div>
+        <div class="cname">Mimosa House</div>
+        <div class="cdetail">Marketplace at Granite Bay, Douglas Blvd &amp; Auburn Folsom Rd · mimosahouse.com · Popular Sacramento-area brunch chain. Known for creative brunch dishes, fresh mimosas, and a lively weekend atmosphere. Great for groups.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#4 Upscale Comfort</div>
+        <div class="cname">Farmhaus Burger</div>
+        <div class="cdetail">Auburn Folsom Rd, Granite Bay · Upscale comfort food in a cozy setting. Known for creative takes on classic dishes including their much-talked-about chicken pot pie. Serves breakfast, lunch, and dinner.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#5 Golf Course Dining</div>
+        <div class="cname">Q1227 Restaurant</div>
+        <div class="cdetail">Granite Bay Golf Club area · q1227restaurant.com · Executive chef-owned restaurant with bold seasonal flavors. Beer and wine only — curated local wines and craft beers. Stunning views. One of the most talked-about dining experiences in Placer County.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Also popular</div>
+        <div class="cname">Timbers at the Lodge · Range Kitchen &amp; Tap</div>
+        <div class="cdetail">Timbers at the Lodge — hidden gem in Sun City area with Sierra Nevada views and fine dining. Range Kitchen &amp; Tap — approachable American menu with craft cocktails and a welcoming neighborhood atmosphere.</div>
+      </div>
+    </div>
+
+    <h4 style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:var(--terra);margin-bottom:12px;border-bottom:1px solid var(--stone);padding-bottom:8px;">🍽️ Lincoln</h4>
+    <div class="g3" style="margin-bottom:28px;">
+      <div class="card">
+        <div class="clabel">#1 Italian · Lincoln Institution</div>
+        <div class="cname">Siino's Pizza Pasta &amp; Grill</div>
+        <div class="cdetail">Lincoln, CA · Family-owned Italian restaurant that has become a Lincoln institution. Pizza, pasta, and grilled dishes in a welcoming family environment. Consistently top-rated among Lincoln residents and well worth the drive from Rocklin.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#2 Thai</div>
+        <div class="cname">Rum Thai Bistro</div>
+        <div class="cdetail">Lincoln, CA · Highly rated Thai restaurant serving authentic curries, noodle dishes, and Thai classics. Warm service and consistently fresh ingredients. One of the top-rated restaurants in Lincoln on both Yelp and Google.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#3 Thai · Also Excellent</div>
+        <div class="cname">Orchid Thai Cuisine</div>
+        <div class="cdetail">Lincoln, CA · Another well-regarded Thai option in Lincoln with a loyal following. Authentic flavors, generous portions, and friendly service. Good for families and weeknight dinners.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#4 Breakfast &amp; Brunch</div>
+        <div class="cname">Four Sisters Cafe</div>
+        <div class="cdetail">Lincoln, CA · Beloved local breakfast and lunch spot. Family atmosphere, homemade specials, and the kind of welcoming small-town vibe that Lincoln is known for. A regular weekend destination for Lincoln families.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">#5 Lebanese · Outpost</div>
+        <div class="cname">Wally's Cafe — Lincoln</div>
+        <div class="cdetail">Lincoln, CA · The nationally ranked Rocklin original has a Lincoln location. Same exceptional Lebanese cuisine — shawarma, kabobs, pomegranate chicken. Excellent for lunch or dinner in Lincoln.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Also popular</div>
+        <div class="cname">Timbers at the Lodge · Sun City area dining</div>
+        <div class="cdetail">Sun City Lincoln Hills and surrounding areas have several popular dining options including Timbers at the Lodge — a fine dining gem with golf course views open to all visitors, not just residents.</div>
+      </div>
+    </div>
+
+    <h4 style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:var(--terra);margin-bottom:12px;border-bottom:1px solid var(--stone);padding-bottom:8px;">🍽️ Auburn &amp; Loomis</h4>
+    <div class="g3" style="margin-bottom:36px;">
+      <div class="card">
+        <div class="clabel">Auburn · Brunch · Local Favorite</div>
+        <div class="cname">Awful Annie's</div>
+        <div class="cdetail">Auburn, CA · Beloved Auburn breakfast and lunch institution. Known for parmesan crusted grilled cheese benedict and creative savory brunch dishes. A must-visit for anyone exploring Old Town Auburn. Get there early on weekends.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Auburn · Caribbean · Adventurous</div>
+        <div class="cname">Joe Caribe</div>
+        <div class="cdetail">Auburn, CA · Unique Caribbean cuisine — fresh tacos with Alaskan cod, pork, chicken, and shrimp. Creative burritos and Latin-inspired dishes unlike anything else in Placer County. A local gem in Old Town Auburn.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Auburn &amp; Placer County</div>
+        <div class="cname">Moonraker Brewing</div>
+        <div class="cdetail">12970 Earhart Ave, Auburn · moonrakerbrewing.com · Award-winning craft brewery in the Sierra foothills. Taproom with rotating food trucks, outdoor seating, and live events. One of the best brewery experiences in Placer County.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Loomis · Cafe</div>
+        <div class="cname">The Destiny Cafe</div>
+        <div class="cdetail">6850 Five Star Blvd, Rocklin CA · (916) 780-1873 · Mon–Thu 7:30am–3pm · Community-mission coffee shop. Temple Coffee specialty roast, artisan pastries, smoothies and protein shakes. Proceeds support Destiny Community Center programs. Beautiful, welcoming space.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Loomis &amp; Auburn · Winery</div>
+        <div class="cname">Loomis Basin Brewing</div>
+        <div class="cdetail">Loomis, CA · Local craft brewery serving the Loomis and Auburn communities. Rotating taps of craft beer in a relaxed taproom setting. A neighborhood gathering spot for Loomis residents.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Foothills · Fine Dining</div>
+        <div class="cname">The Rustic Table</div>
+        <div class="cdetail">Placer County foothills · One of the top-rated restaurants in all of Placer County on Yelp. Farm-forward menu in a warm, rustic setting. Worth the drive for a special dinner experience in the Placer County foothills.</div>
+      </div>
+    </div>
+
+    <!-- TOP 2 OUTSIDE PLACER -->
+    <div style="background:var(--deep);border-radius:10px;padding:24px 28px;margin-bottom:36px;">
+      <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--sienna);font-weight:500;margin-bottom:8px;">Beyond Placer County — top 2 restaurants worth the drive</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div style="background:rgba(245,237,228,0.06);border:1px solid rgba(245,237,228,0.12);border-radius:8px;padding:16px;">
+          <div style="font-size:11px;color:rgba(245,237,228,0.45);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;margin-bottom:4px;">Folsom · Historic Downtown</div>
+          <div style="font-size:15px;font-weight:500;color:var(--cream);margin-bottom:4px;">Sutter Street dining scene</div>
+          <div style="font-size:12px;color:rgba(245,237,228,0.55);font-weight:300;line-height:1.6;">Folsom's historic Sutter Street has one of the best concentrations of restaurants, wine bars, and cafes in the greater Sacramento region. 15 minutes from Rocklin. A popular destination for Placer County residents for weekend dining.</div>
+        </div>
+        <div style="background:rgba(245,237,228,0.06);border:1px solid rgba(245,237,228,0.12);border-radius:8px;padding:16px;">
+          <div style="font-size:11px;color:rgba(245,237,228,0.45);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;margin-bottom:4px;">Sacramento · Midtown</div>
+          <div style="font-size:15px;font-weight:500;color:var(--cream);margin-bottom:4px;">Sacramento Midtown restaurant scene</div>
+          <div style="font-size:12px;color:rgba(245,237,228,0.55);font-weight:300;line-height:1.6;">Sacramento's Midtown neighborhood has one of the most vibrant and diverse restaurant scenes in Northern California — from Michelin-recognized Camden Spit &amp; Larder to farm-to-table gems. 35 minutes from Rocklin.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAFES & LOCAL FAVORITES -->
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--deep);margin-bottom:14px;">Cafes &amp; local favorites</h3>
+    <div class="g3" style="margin-bottom:28px;">
+      <div class="card">
+        <div class="cicon">☕</div>
+        <div class="clabel">Community Cafe · Rocklin</div>
+        <div class="cname">The Destiny Cafe</div>
+        <div class="cdetail">6850 Five Star Blvd, Rocklin CA 95677 · (916) 780-1873 · Mon–Thu 7:30am–3pm · Temple Coffee specialty roast, artisan pastries made daily, smoothies, and protein shakes. Every purchase supports Destiny Community Center programs. Beautiful welcoming space — great for remote work.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🥩</div>
+        <div class="clabel">Specialty · Roseville</div>
+        <div class="cname">Roseville Meat Company</div>
+        <div class="cdetail">Roseville, CA · Local specialty butcher and meat market. Highly rated for quality cuts, custom orders, and knowledgeable staff. A favorite among Placer County residents who are serious about their cooking.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🍩</div>
+        <div class="clabel">Breakfast · Roseville</div>
+        <div class="cname">Dr. Bob's Donuts</div>
+        <div class="cdetail">Roseville, CA · Local donut institution in Roseville Heights. Creative and classic donuts, consistently fresh. The kind of neighborhood donut shop that people drive across town for. Open early.</div>
+      </div>
+    </div>
+
+    <!-- GROCERY STORES -->
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--deep);margin-bottom:14px;">Grocery stores in Placer County</h3>
+    <div class="g3" style="margin-bottom:28px;">
+      <div class="card">
+        <div class="cicon">🛒</div>
+        <div class="clabel">Best local chain · Multiple locations</div>
+        <div class="cname">Raley's</div>
+        <div class="cdetail">Multiple Rocklin and Roseville locations · raleys.com · Sacramento-founded family-owned chain since 1935. Full-service with excellent deli, bakery, pharmacy, and prepared foods. One of Placer County's most popular grocers.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🛒</div>
+        <div class="clabel">Best overall quality · Multiple locations</div>
+        <div class="cname">Nugget Markets</div>
+        <div class="cdetail">Roseville and surrounding area · nuggetmarkets.com · Locally beloved Sacramento-area chain. Exceptional produce, prepared foods, specialty cheese, wine, and kosher section. Consistently rated best grocery in the region.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🛒</div>
+        <div class="clabel">Best value · Rocklin &amp; Roseville</div>
+        <div class="cname">WinCo Foods</div>
+        <div class="cdetail">Locations in Rocklin and Roseville · wincofoods.com · Employee-owned bulk and discount grocer. Open 24 hours. Best prices on pantry staples and bulk goods in Placer County. Cash and debit only.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🛒</div>
+        <div class="clabel">Organic &amp; specialty · Roseville</div>
+        <div class="cname">Whole Foods Market</div>
+        <div class="cdetail">1001 Galleria Blvd, Roseville · wholefoods.com · Organic produce, specialty and international items, prepared foods, excellent wine and cheese selection. Best organic and specialty grocery in Placer County.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🛒</div>
+        <div class="clabel">Natural &amp; organic · Roseville</div>
+        <div class="cname">Sprouts Farmers Market</div>
+        <div class="cdetail">Roseville, CA · sprouts.com · Natural and organic grocery with outstanding produce, bulk bins, vitamins, and supplements. Strong allergen-free and specialty diet selection at competitive prices.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🛒</div>
+        <div class="clabel">Neighborhood staple · Multiple locations</div>
+        <div class="cname">Safeway / Bel Air</div>
+        <div class="cdetail">Multiple Rocklin and Roseville locations · safeway.com · Bel Air is Safeway's Sacramento-region brand. Convenient locations, pharmacy, Starbucks inside, and strong weekly sale programs.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🛒</div>
+        <div class="clabel">Discount &amp; budget · Rocklin</div>
+        <div class="cname">Grocery Outlet Bargain Market</div>
+        <div class="cdetail">Rocklin, CA · groceryoutlet.com · Independently operated discount grocer with rotating name-brand products at deeply discounted prices. Great for budget shoppers and pantry stocking.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🛒</div>
+        <div class="clabel">Indian &amp; South Asian · Roseville</div>
+        <div class="cname">India Supermarket</div>
+        <div class="cdetail">1265 Pleasant Grove Blvd, Roseville · (916) 760-8674 · Punjabi, South Indian, Bengali, Marathi, Fijian &amp; Middle Eastern ingredients. Fresh vegetables Sun/Mon/Thu. Best-stocked South Asian grocery in Placer County.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🛒</div>
+        <div class="clabel">International &amp; Asian · Roseville</div>
+        <div class="cname">Oriental Market</div>
+        <div class="cdetail">Roseville, CA · Full Asian grocery selection. Fresh produce, specialty sauces, noodles, and Asian pantry staples. One of the top-rated specialty grocers in the Roseville area for Asian ingredients.</div>
+      </div>
+    </div>
+
+    <!-- TOP 2 GROCERY OUTSIDE PLACER -->
+    <div style="background:var(--deep);border-radius:10px;padding:24px 28px;margin-bottom:36px;">
+      <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--sienna);font-weight:500;margin-bottom:8px;">Beyond Placer County — top 2 grocery options worth knowing</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div style="background:rgba(245,237,228,0.06);border:1px solid rgba(245,237,228,0.12);border-radius:8px;padding:16px;">
+          <div style="font-size:11px;color:rgba(245,237,228,0.45);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;margin-bottom:4px;">Sacramento County · Korean/Asian</div>
+          <div style="font-size:15px;font-weight:500;color:var(--cream);margin-bottom:4px;">H Mart — Elk Grove</div>
+          <div style="font-size:12px;color:rgba(245,237,228,0.55);font-weight:300;line-height:1.6;">hmart.com · Premier Korean supermarket with full grocery, food court, and specialty Asian items. 40 minutes from Rocklin. Worth the trip for Korean specialty ingredients not found in Placer County.</div>
+        </div>
+        <div style="background:rgba(245,237,228,0.06);border:1px solid rgba(245,237,228,0.12);border-radius:8px;padding:16px;">
+          <div style="font-size:11px;color:rgba(245,237,228,0.45);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;margin-bottom:4px;">Sacramento · Multiple Locations</div>
+          <div style="font-size:15px;font-weight:500;color:var(--cream);margin-bottom:4px;">99 Ranch Market</div>
+          <div style="font-size:12px;color:rgba(245,237,228,0.55);font-weight:300;line-height:1.6;">99ranch.com · Largest Asian supermarket chain in the US. Multiple Sacramento area locations. Full produce, fresh seafood, and the widest Asian specialty selection in the region.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOPPING -->
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--deep);margin-bottom:14px;">Shopping in Placer County</h3>
+    <div class="g3" style="margin-bottom:20px;">
+      <div class="card-alt">
+        <div class="cicon">🛍️</div>
+        <div class="cname">Westfield Galleria — Roseville</div>
+        <div class="cdetail">1151 Galleria Blvd, Roseville · The premier shopping mall in Placer County. Nordstrom, Apple, and 150+ stores. Restaurant row and multiple dining options. The regional destination for shopping in Northern California.</div>
+      </div>
+      <div class="card-alt">
+        <div class="cicon">🛍️</div>
+        <div class="cname">The Fountains — Roseville</div>
+        <div class="cdetail">1198 Roseville Pkwy, Roseville · Outdoor lifestyle center with Target, Whole Foods, restaurants, and the year-round Tuesday farmers market. One of Placer County's most popular gathering places.</div>
+      </div>
+      <div class="card-alt">
+        <div class="cicon">🛍️</div>
+        <div class="cname">Historic Old Town Auburn</div>
+        <div class="cdetail">Lincoln Way, Auburn CA 95603 · Placer County's most charming main street. Local restaurants, boutique shops, wine bars, and antique stores in the historic county seat. A favorite weekend destination throughout the county.</div>
+      </div>
+      <div class="card-alt">
+        <div class="cicon">🛍️</div>
+        <div class="cname">Blue Oaks Town Center — Rocklin</div>
+        <div class="cdetail">Blue Oaks Blvd, Rocklin · Large retail center with Target, major retailers, and dining. One of the main everyday shopping destinations for Rocklin residents. Farmers market here seasonally.</div>
+      </div>
+      <div class="card-alt">
+        <div class="cicon">🛍️</div>
+        <div class="cname">Twelve Bridges — Lincoln</div>
+        <div class="cdetail">Twelve Bridges Dr, Lincoln · Growing retail corridor in Lincoln serving the city's rapidly expanding population. New retailers and restaurants continue to open as Lincoln develops.</div>
+      </div>
+      <div class="card-alt">
+        <div class="cicon">🛍️</div>
+        <div class="cname">Pleasant Grove Blvd Corridor — Roseville</div>
+        <div class="cdetail">Pleasant Grove Blvd, Roseville · International grocery stores, specialty markets, restaurants, and retail. The most diverse shopping corridor in Placer County — particularly for South Asian, Asian, and Middle Eastern needs.</div>
+      </div>
+    </div>
+
+    <!-- TOP 2 SHOPPING OUTSIDE PLACER -->
+    <div style="background:var(--deep);border-radius:10px;padding:24px 28px;margin-bottom:8px;">
+      <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--sienna);font-weight:500;margin-bottom:8px;">Beyond Placer County — top 2 shopping destinations</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div style="background:rgba(245,237,228,0.06);border:1px solid rgba(245,237,228,0.12);border-radius:8px;padding:16px;">
+          <div style="font-size:11px;color:rgba(245,237,228,0.45);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;margin-bottom:4px;">Sacramento County · 15 min from Rocklin</div>
+          <div style="font-size:15px;font-weight:500;color:var(--cream);margin-bottom:4px;">Folsom Premium Outlets</div>
+          <div style="font-size:12px;color:rgba(245,237,228,0.55);font-weight:300;line-height:1.6;">Premium outlet shopping with 70+ designer and brand-name stores at reduced prices. One of the most popular shopping destinations in the greater Sacramento region. Easy drive from Rocklin.</div>
+        </div>
+        <div style="background:rgba(245,237,228,0.06);border:1px solid rgba(245,237,228,0.12);border-radius:8px;padding:16px;">
+          <div style="font-size:11px;color:rgba(245,237,228,0.45);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;margin-bottom:4px;">Sacramento · Downtown</div>
+          <div style="font-size:15px;font-weight:500;color:var(--cream);margin-bottom:4px;">Downtown Sacramento &amp; K Street</div>
+          <div style="font-size:12px;color:rgba(245,237,228,0.55);font-weight:300;line-height:1.6;">Downtown Sacramento has boutiques, entertainment, Golden 1 Center for concerts and Kings games, and the historic Old Sacramento waterfront. 35 minutes from Rocklin — popular for evenings out.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- UTILITIES -->
+<div class="sec" id="utilities">
+  <div class="inner">
+    <div class="sec-label">Utilities</div>
+    <h2 class="sec-title">Setting up utilities<br>in Placer County.</h2>
+    <p class="sec-body">Which provider serves your address depends on your specific city. Set everything up before your move-in date so services are active when you arrive.</p>
+    <div class="g4" style="margin-bottom:16px;">
+      <div class="card">
+        <div class="clabel">Electricity — Rocklin, Loomis, Lincoln</div>
+        <div class="cname">Pacific Gas &amp; Electric (PG&amp;E)</div>
+        <div class="cdetail">pge.com · (800) 743-5000 · Serves most of Placer County outside Roseville. Set up online or by phone. Have your move-in date and address ready.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Electricity — Roseville Only</div>
+        <div class="cname">Roseville Electric</div>
+        <div class="cdetail">roseville.ca.us · City-owned utility. Competitive rates — one of the advantages of living in Roseville specifically. Set up through City of Roseville utility billing.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Water — Rocklin &amp; Much of Placer County</div>
+        <div class="cname">Placer County Water Agency</div>
+        <div class="cdetail">pcwa.net · (530) 823-4850 · Provides water throughout most of unincorporated Placer County and Rocklin. Roseville manages its own water through city billing.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Gas — All of Placer County</div>
+        <div class="cname">Pacific Gas &amp; Electric (PG&amp;E)</div>
+        <div class="cdetail">pge.com · (800) 743-5000 · PG&E provides natural gas service throughout all of Placer County. Set up alongside electricity when applicable.</div>
+      </div>
+    </div>
+    <div class="g3">
+      <div class="card-alt">
+        <div class="clabel">Internet — Most Available</div>
+        <div class="cname">Xfinity (Comcast)</div>
+        <div class="cdetail">xfinity.com · (800) 934-6489 · Cable and gigabit fiber. Most widely available provider in established Placer County neighborhoods throughout Rocklin and Roseville.</div>
+      </div>
+      <div class="card-alt">
+        <div class="clabel">Internet — Fiber Where Available</div>
+        <div class="cname">AT&amp;T Fiber</div>
+        <div class="cdetail">att.com · Check availability at your specific address. Gigabit speeds where available. Coverage is growing throughout Placer County neighborhoods.</div>
+      </div>
+      <div class="card-alt">
+        <div class="clabel">Internet — Loomis, Lincoln &amp; Rural</div>
+        <div class="cname">Starlink</div>
+        <div class="cdetail">starlink.com · Excellent option for Loomis, Lincoln, and rural Placer County addresses where cable infrastructure is limited. Equipment purchase required upfront but reliable service.</div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-top:16px;font-weight:300;">Full utilities guide: <a href="getting-settled-placer-county.html" style="color:var(--terra);font-weight:500;">Getting Settled in Placer County</a></p>
+  </div>
+</div>
+
+<!-- DMV & GETTING SETTLED -->
+<div class="sec sec-alt" id="settled">
+  <div class="inner">
+    <div class="sec-label">DMV &amp; government services</div>
+    <h2 class="sec-title">California requirements<br>for new residents.</h2>
+    <p class="sec-body">California has specific legal deadlines for driver's license and vehicle registration. Missing them can result in fines. Handle these in the first three weeks after you arrive.</p>
+    <div class="g3" style="margin-bottom:16px;">
+      <div class="card">
+        <div class="cicon">🪪</div>
+        <div class="cname">California Driver's License</div>
+        <div class="cdetail" style="margin-bottom:10px;"><strong style="color:var(--deep);font-weight:500;">Required within 10 days of establishing residency.</strong> Make a DMV appointment immediately at dmv.ca.gov — walk-in waits can be 2–4 hours. Bring your out-of-state license, Social Security card, and two proofs of California residency (utility bill, lease, or bank statement).</div>
+        <div style="font-size:12px;color:var(--deep);font-weight:500;">Roseville DMV: 1699 Orlando Ave · (916) 657-6525</div>
+        <div style="font-size:12px;color:var(--deep);font-weight:500;">Auburn DMV: 11268 Fuller Dr · Often less crowded</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🚗</div>
+        <div class="cname">Vehicle Registration</div>
+        <div class="cdetail" style="margin-bottom:10px;"><strong style="color:var(--deep);font-weight:500;">Required within 20 days of establishing residency.</strong> Requires a California smog check (most vehicles over 4 years old), proof of California insurance, and registration fee payment. Smog check stations are widely available throughout Placer County.</div>
+        <div style="font-size:12px;color:var(--muted);font-weight:300;">Complete at either the Roseville or Auburn DMV office.</div>
+      </div>
+      <div class="card">
+        <div class="cicon">🗳️</div>
+        <div class="cname">Other Government Services</div>
+        <div class="cdetail">
+          <strong style="color:var(--deep);font-weight:500;">Voter registration:</strong> registertovote.ca.gov<br><br>
+          <strong style="color:var(--deep);font-weight:500;">Placer County Elections:</strong> 2994 Richardson Dr, Auburn · (530) 886-5650<br><br>
+          <strong style="color:var(--deep);font-weight:500;">Placer County Library card:</strong> Free with proof of residency · placer.ca.gov/library<br><br>
+          <strong style="color:var(--deep);font-weight:500;">USPS mail forwarding:</strong> Set up at usps.com before your move date
+        </div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);font-weight:300;">Full checklist with libraries, utilities, healthcare setup and more: <a href="getting-settled-placer-county.html" style="color:var(--terra);font-weight:500;">Getting Settled in Placer County</a></p>
+  </div>
+</div>
+
+<!-- CHECKLIST -->
+<div class="sec" id="checklist">
+  <div class="inner">
+    <div class="sec-label">New resident checklist</div>
+    <h2 class="sec-title">Your Placer County checklist.<br>Check things off as you go.</h2>
+    <div class="g3">
+      <div class="ck-card">
+        <div class="ck-head"><div class="ck-icon">⚡</div><div class="ck-title">Utilities</div></div>
+        <div class="ck-body">
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Electricity</strong>PG&E or Roseville Electric</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Gas</strong>PG&E for all Placer County</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Water</strong>PCWA or city utility billing</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Internet</strong>Xfinity, AT&T Fiber, or Starlink</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Trash service</strong>Auto-set with your address registration</div></div>
+        </div>
+      </div>
+      <div class="ck-card">
+        <div class="ck-head"><div class="ck-icon">🪪</div><div class="ck-title">DMV &amp; Legal</div></div>
+        <div class="ck-body">
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>CA driver's license</strong>Within 10 days — book DMV appointment now</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Vehicle registration</strong>Within 20 days — includes smog check</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>CA auto insurance</strong>Required before vehicle registration</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Voter registration</strong>registertovote.ca.gov</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>USPS mail forwarding</strong>Set up at usps.com before move day</div></div>
+        </div>
+      </div>
+      <div class="ck-card">
+        <div class="ck-head"><div class="ck-icon">🏫</div><div class="ck-title">Schools &amp; Kids</div></div>
+        <div class="ck-body">
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>School enrollment</strong>Proof of residency + immunization records</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Childcare / daycare</strong>Waitlists can be long — enroll early</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Youth sports</strong>AYSO, Little League, swim teams</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Library card</strong>Free — placer.ca.gov/library</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Community connection</strong>Call Sunit for personal introductions</div></div>
+        </div>
+      </div>
+      <div class="ck-card">
+        <div class="ck-head"><div class="ck-icon">🏥</div><div class="ck-title">Healthcare</div></div>
+        <div class="ck-body">
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Primary care physician</strong>Sutter, Kaiser, or Adventist network</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Pediatrician</strong>Establish before you need urgent care</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Dentist</strong>Find in-network before next cleaning</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Pharmacy</strong>Transfer prescriptions to local pharmacy</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Health insurance</strong>Update address with insurance carrier</div></div>
+        </div>
+      </div>
+      <div class="ck-card">
+        <div class="ck-head"><div class="ck-icon">📬</div><div class="ck-title">Address Updates</div></div>
+        <div class="ck-body">
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Bank &amp; credit cards</strong>Update all financial accounts</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Employer HR</strong>Update payroll and state withholding</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Insurance policies</strong>Home, auto, life — all policies</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>IRS address change</strong>Form 8822 at irs.gov</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Subscriptions &amp; deliveries</strong>Amazon, magazines, etc.</div></div>
+        </div>
+      </div>
+      <div class="ck-card">
+        <div class="ck-head"><div class="ck-icon">🏠</div><div class="ck-title">Home Setup</div></div>
+        <div class="ck-body">
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Change locks</strong>Always recommended on resale homes</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Homeowner's insurance</strong>Confirm policy is active</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>HOA contact info</strong>Introduce yourself and get community rules</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Home warranty docs</strong>Locate if included with purchase</div></div>
+          <div class="ck-item"><div class="cb" onclick="this.classList.toggle('done')"></div><div><strong>Trusted vendor list</strong>Call Sunit — I have a vetted list</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SURROUNDING AREAS -->
+<div class="sec sec-alt" id="surrounding">
+  <div class="inner">
+    <div class="sec-label">Beyond Placer County</div>
+    <h2 class="sec-title">Surrounding areas worth knowing.</h2>
+    <p class="sec-body">Placer County is the focus of this guide — but many families also consider these nearby communities. Each offers something different and serves buyers at different price points or with different priorities.</p>
+    <div class="g4">
+      <a href="neighborhoods/folsom.html" class="surround-card">
+        <div class="surround-tag">Sacramento County · 15 min from Rocklin</div>
+        <div class="surround-name">Folsom</div>
+        <div class="surround-detail">Consistently ranked one of California's best cities for families. Historic Sutter Street, Folsom Lake access, excellent Folsom-Cordova Unified schools, and strong community pride. Feels very similar to Placer County in character.</div>
+        <div class="surround-price">$600K – $900K · <a href="neighborhoods/folsom.html" style="color:var(--terra);font-weight:500;">View guide &rarr;</a></div>
+      </a>
+      <a href="neighborhoods/yuba-city.html" class="surround-card">
+        <div class="surround-tag">Sutter County · 30 min north</div>
+        <div class="surround-name">Yuba City</div>
+        <div class="surround-detail">Sacramento Valley's best value market. Strong South Asian and Punjabi community — the annual Nagar Kirtan draws 100,000+ people. Sutter Medical Center is the anchor employer. Sunit has personally closed two buyer transactions here.</div>
+        <div class="surround-price">$450K – $650K · <a href="neighborhoods/yuba-city.html" style="color:var(--terra);font-weight:500;">View guide &rarr;</a></div>
+      </a>
+      <a href="neighborhoods/marysville.html" class="surround-card">
+        <div class="surround-tag">Yuba County · 30 min north</div>
+        <div class="surround-name">Marysville</div>
+        <div class="surround-detail">One of California's oldest cities with genuine character. Sits at the confluence of the Yuba and Feather Rivers. Some of the most affordable housing in the greater Sacramento region. Pairs well with Yuba City directly across the river.</div>
+        <div class="surround-price">$300K – $500K · <a href="neighborhoods/marysville.html" style="color:var(--terra);font-weight:500;">View guide &rarr;</a></div>
+      </a>
+      <a href="neighborhoods/plumas-lake.html" class="surround-card">
+        <div class="surround-tag">Yuba County · New Construction</div>
+        <div class="surround-name">Plumas Lake</div>
+        <div class="surround-detail">Fast-growing master-planned community with excellent new construction quality. Popular with families who want modern homes at prices that Placer County cannot match. Strong community feel and well-maintained streets.</div>
+        <div class="surround-price">$450K – $650K · <a href="neighborhoods/plumas-lake.html" style="color:var(--terra);font-weight:500;">View guide &rarr;</a></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- SUNIT -->
+<div class="sec sec-dark">
+  <div class="sunit-wrap">
+    <img class="sunit-photo" src="sunit-brar.jpg" alt="Sunit Brar — Placer County Realtor">
+    <div>
+      <div class="sunit-eyebrow">From Sunit — Loomis, CA resident since 2019</div>
+      <h2 class="sunit-title">I moved here from Ohio. I know exactly what you are going through.</h2>
+      <p class="sunit-body">My husband is a pulmonary and critical care physician. We moved from India to Ohio, then to Loomis, California in 2019. I ran his medical practice, raised our children, and then made the leap — closing everything familiar and starting over here. I know the school research, the commute testing, the loneliness of those first months, and the profound relief of finally feeling like you belong somewhere. I became a Realtor because of this experience. Once you have chosen your neighborhood, I will personally connect you with community members in your area — across any culture and any tradition. That is a promise, not a sales pitch.</p>
+      <a href="tel:2162882096" class="sunit-btn">Call (216) 288-2096</a>
+    </div>
+  </div>
+</div>
+
+<div class="cta">
+  <h2>Ready to make Placer County home?</h2>
+  <p>Let's start with a conversation. No pressure, no obligation — just real local knowledge from someone who lives here.</p>
+  <div class="cta-btns">
+    <a href="relocation-guide.html" class="btn-cream">Get the relocation guide</a>
+    <a href="contact.html" class="btn-out">Get in touch</a>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="fl">Sunit Brar · Stone Real Estate</div>
+    <div class="fi">DRE# 02125592 · 3500 Douglas Blvd, Roseville CA 95661</div>
+  </div>
+  <div class="fc">
+    <a href="tel:2162882096">(216) 288-2096</a> &middot;
+    <a href="mailto:sunitrealtor@gmail.com">sunitrealtor@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
